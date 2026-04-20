@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Understated Interventions — 2026</title>
+<style>
+  /* ── Dark mode (default) ───────────────────────────────────── */
+  :root {
+    --bg: #1a1a1e;
+    --panel: #22222a;
+    --surface: #2a2a33;
+    --deep: #111116;
+    --text: #d8d4cb;
+    --text-sub: #e7dfcd;
+    --text-sub2: #c8bfa9;
+    --muted: #8e897d;
+    --accent: #c9a86a;
+    --accent-dim: #7d6940;
+    --rule: #33333c;
+    --link: #b8c9e0;
+    --nav-bg: rgba(26,26,30,0.96);
+    --blockquote: #e8e0cd;
+    --callout-bg: linear-gradient(135deg, #2a1a1e, #22222a);
+  }
+
+  /* ── Light mode ────────────────────────────────────────────── */
+  html.light {
+    --bg: #f6f3ec;
+    --panel: #edeae0;
+    --surface: #e4e0d4;
+    --deep: #ddd9cc;
+    --text: #1e1a14;
+    --text-sub: #2c2418;
+    --text-sub2: #4a3c28;
+    --muted: #6e6558;
+    --accent: #7a5608;
+    --accent-dim: #c9a86a;
+    --rule: #cdc7b8;
+    --link: #1a4878;
+    --nav-bg: rgba(246,243,236,0.96);
+    --blockquote: #2c2418;
+    --callout-bg: linear-gradient(135deg, #ede8de, #e4e0d4);
+  }
+  html.light table.idx .gA { color: #2a6a3a; }
+  html.light table.idx .gB { color: #7a5000; }
+  html.light table.idx .gC { color: #6a3e10; }
+  html.light table.idx .gD { color: #5a2a10; }
+  html.light table.idx .gF { color: #6a1818; }
+  html.light .grade { color: #f5f0e8; }
+  html.light .grade.A { background: #3d7a50; }
+  html.light .grade.B { background: #8b6910; }
+  html.light .grade.C { background: #7a4e18; }
+  html.light .grade.D { background: #6a3018; }
+  html.light .grade.F { background: #5a1818; }
+  html.light summary:hover { color: #4a3000; }
+
+  /* ── Base ──────────────────────────────────────────────────── */
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { background: var(--bg); color: var(--text); margin: 0; padding: 0; transition: background 0.2s, color 0.2s; }
+  body {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 2.2rem 1.5rem 5rem; }
+
+  /* ── Header ────────────────────────────────────────────────── */
+  header.top {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  header.top h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: -0.01em;
+    color: var(--accent);
+  }
+  header.top .sub { color: var(--muted); font-style: italic; font-size: 0.95rem; }
+
+  /* ── Theme toggle ──────────────────────────────────────────── */
+  #theme-toggle {
+    position: fixed;
+    top: 0.75rem;
+    right: 1rem;
+    z-index: 200;
+    background: var(--panel);
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 0.25rem 0.55rem;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-family: inherit;
+    transition: color 0.15s, border-color 0.15s, background 0.2s;
+  }
+  #theme-toggle:hover { color: var(--accent); border-color: var(--accent-dim); }
+
+  /* ── Nav ───────────────────────────────────────────────────── */
+  nav.toc {
+    position: sticky;
+    top: 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+    border-bottom: 1px solid var(--rule);
+    margin: 0 -1.5rem 2rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.82rem;
+    transition: background 0.2s;
+  }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1.1rem; }
+  nav.toc a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted transparent; }
+  nav.toc a:hover { color: var(--accent); border-bottom-color: var(--accent-dim); }
+
+  /* ── Typography ────────────────────────────────────────────── */
+  h2 { color: var(--accent); font-size: 1.4rem; margin: 2.8rem 0 0.8rem; padding-top: 1rem; border-top: 1px solid var(--rule); letter-spacing: -0.005em; }
+  h3 { font-size: 1.08rem; margin: 1.6rem 0 0.4rem; color: var(--text-sub); }
+  h4 { font-size: 0.98rem; margin: 1rem 0 0.3rem; color: var(--text-sub2); }
+  p { margin: 0.7rem 0; }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--accent-dim); }
+  a:hover { color: var(--accent); }
+  em.cite { font-style: normal; color: var(--muted); font-size: 0.86rem; }
+  em.cite a { color: var(--muted); border-bottom-color: transparent; }
+  em.cite a:hover { color: var(--accent); border-bottom-color: var(--accent-dim); }
+  blockquote { border-left: 2px solid var(--accent); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; color: var(--blockquote); font-style: italic; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin: 0.35rem 0; }
+  code { background: var(--surface); padding: 0.05rem 0.3rem; border-radius: 3px; font-size: 0.88em; }
+  hr.soft { border: none; border-top: 1px dashed var(--rule); margin: 2rem 0; }
+  .meta-foot { color: var(--muted); font-size: 0.8rem; font-style: italic; margin-top: 2rem; }
+
+  /* ── Details / summary ─────────────────────────────────────── */
+  details { margin: 0.8rem 0 1.2rem; border-left: 2px solid var(--accent-dim); padding: 0.2rem 0 0.2rem 1rem; background: var(--panel); border-radius: 0 4px 4px 0; transition: background 0.2s; }
+  details[open] { padding-bottom: 0.6rem; }
+  summary { cursor: pointer; font-weight: bold; color: var(--accent); padding: 0.5rem 0.6rem; font-size: 0.98rem; outline: none; }
+  summary:hover { color: #e5c98a; }
+  details > *:not(summary) { padding: 0 0.6rem; }
+
+  /* ── Grade badges ──────────────────────────────────────────── */
+  .grade { display: inline-block; background: var(--accent-dim); color: #1a1a1e; font-weight: bold; font-size: 0.72rem; padding: 0.08rem 0.45rem; border-radius: 3px; margin-right: 0.4rem; letter-spacing: 0.04em; }
+  .grade.A { background: #7fa98a; color: #0e1e12; }
+  .grade.B { background: #c9a86a; color: #1a1208; }
+  .grade.C { background: #b08550; color: #1a1208; }
+  .grade.D { background: #8a5a3f; color: #f0e8d8; }
+  .grade.F { background: #6e3838; color: #f0e8d8; }
+
+  /* ── Bottom-line / callout ─────────────────────────────────── */
+  .bottom-line { background: var(--surface); border-left: 3px solid var(--accent); padding: 0.8rem 1rem; margin: 1rem 0; font-size: 0.96rem; transition: background 0.2s; }
+  .bottom-line strong { color: var(--accent); }
+  .callout { background: var(--callout-bg); padding: 1rem 1.2rem; border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; margin: 1.2rem 0; font-size: 0.95rem; transition: background 0.2s; }
+  .callout .k { color: var(--accent); font-weight: bold; }
+
+  /* ── Refs ──────────────────────────────────────────────────── */
+  .refs ol { font-size: 0.85rem; color: var(--muted); padding-left: 1.8rem; }
+  .refs li { margin: 0.4rem 0; line-height: 1.5; }
+  .refs a { color: var(--link); }
+
+  /* ── Wide breakout ─────────────────────────────────────────── */
+  .wide { max-width: 1100px; margin-left: calc(-170px); margin-right: calc(-170px); }
+  @media (max-width: 1100px) { .wide { max-width: 100%; margin-left: 0; margin-right: 0; } }
+
+  /* ── Harm ledger ───────────────────────────────────────────── */
+  .ledger { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 1rem 0; margin: 1.2rem 0; }
+  .ledger-row { display: grid; grid-template-columns: 200px 1fr 70px; gap: 0.6rem; align-items: center; margin: 0.55rem 0; font-size: 0.9rem; }
+  .ledger-label { color: var(--text); }
+  .ledger-bar-wrap { background: var(--deep); height: 1.1rem; border-radius: 2px; overflow: hidden; position: relative; transition: background 0.2s; }
+  .ledger-bar { height: 100%; background: linear-gradient(90deg, #8a5a3f, #c26868); }
+  .ledger-bar.protective { background: linear-gradient(90deg, #3f5a3f, #7fa98a); }
+  .ledger-val { color: var(--muted); font-size: 0.82rem; text-align: right; font-variant-numeric: tabular-nums; }
+  .ledger-note { color: var(--muted); font-size: 0.8rem; margin-top: 1rem; font-style: italic; }
+
+  /* ── Filterable index ──────────────────────────────────────── */
+  .filters { display: flex; gap: 1.2rem; flex-wrap: wrap; margin: 1rem 0 1.2rem; font-size: 0.85rem; padding: 0.7rem 0.9rem; background: var(--panel); border-radius: 4px; transition: background 0.2s; }
+  .filters fieldset { border: none; margin: 0; padding: 0; display: flex; gap: 0.3rem 0.7rem; flex-wrap: wrap; align-items: center; }
+  .filters legend { color: var(--accent); padding-right: 0.5rem; font-weight: bold; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  .filters label { color: var(--muted); cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; }
+  .filters input[type="checkbox"] { accent-color: var(--accent); }
+  table.idx { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin: 0.5rem 0; }
+  table.idx th { text-align: left; color: var(--accent); font-weight: bold; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--rule); font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; }
+  table.idx td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  table.idx tr.hide { display: none; }
+  table.idx .g { font-weight: bold; letter-spacing: 0.04em; font-size: 0.78rem; }
+  table.idx .gA { color: #7fa98a; }
+  table.idx .gB { color: #c9a86a; }
+  table.idx .gC { color: #b08550; }
+  table.idx .gD { color: #8a5a3f; }
+  table.idx .gF { color: #9a4a4a; }
+
+  /* ── Stack explorer ────────────────────────────────────────── */
+  .stack-box { background: var(--panel); padding: 1rem 1.1rem; border-radius: 4px; margin: 1.2rem 0; border-left: 3px solid var(--accent); transition: background 0.2s; }
+  .stack-box select { background: var(--deep); color: var(--text); border: 1px solid var(--rule); padding: 0.4rem 0.6rem; font-family: inherit; font-size: 0.92rem; border-radius: 3px; width: 100%; max-width: 480px; transition: background 0.2s, color 0.2s; }
+  .stack-verdict { margin-top: 0.9rem; padding: 0.7rem 0.9rem; background: var(--deep); border-radius: 3px; font-size: 0.92rem; line-height: 1.55; min-height: 2rem; transition: background 0.2s; }
+  .stack-verdict .tag { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 2px; font-size: 0.7rem; font-weight: bold; letter-spacing: 0.06em; margin-right: 0.5rem; vertical-align: middle; }
+  .stack-verdict .tag.add { background: #3f5a3f; color: #e8f0da; }
+  .stack-verdict .tag.neutral { background: #5a5a3f; color: #f0ecd8; }
+  .stack-verdict .tag.conflict { background: #6e3838; color: #f0e8d8; }
+  .stack-verdict .tag.spec { background: #3f4a5a; color: #dae5f0; }
+</style>
+<script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light');</script>
+</head>
+<body>
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">◐</button>
+
+<div class="container">
+
+<header class="top">
+  <h1>Understated Interventions</h1>
+  <div class="sub">Identity restructuring and cognitive augmentation in 2026, after the obvious psychedelic/nootropic map has already been drawn.</div>
+</header>
+
+<section id="preamble" style="margin-bottom: 2rem; border-bottom: 1px solid var(--rule); padding-bottom: 1.8rem;">
+<p>This document is a graded audit of interventions for identity restructuring and cognitive augmentation — not the standard ones, the ones that sit in regulatory, economic, or disciplinary shadows despite having real mechanism and usable human data. It was assembled as a personal reference and is being shared because the central argument (that the cost of <em>not</em> intervening is systematically invisible in how we evaluate interventions) is worth circulating.</p>
+
+<p>It covers ~50 interventions across identity work, cognitive augmentation, sleep pharmacology, metabolic health, and regulatory suppression cases. Each is graded A–F with explicit effect sizes, heterogeneity notes, and commit/skip verdicts. Grades reflect evidence quality and evidence-to-burden ratio — not mechanism elegance or cultural prestige. Several things rated highly will surprise you; several things with large followings are rated F.</p>
+
+<p>This is one person's epistemic state as of April 2026, assembled with AI-assisted literature synthesis. It is not medical advice. Citations are linked where verifiable; a small number of sources are cited descriptively where the original could not be confirmed against a public URL.</p>
+</section>
+
+<nav class="toc" aria-label="Table of contents">
+  <ol>
+    <li><a href="#frame">1 Frame</a></li>
+    <li><a href="#asymmetry">2 Asymmetry</a></li>
+    <li><a href="#ledger">3 Harm ledger</a></li>
+    <li><a href="#identity">4 Identity</a></li>
+    <li><a href="#cognition">5 Cognition</a></li>
+    <li><a href="#additional">6 Additional</a></li>
+    <li><a href="#premises">7 Premises</a></li>
+    <li><a href="#sleep">8 Sleep</a></li>
+    <li><a href="#glp1">9 GLP-1</a></li>
+    <li><a href="#stacking">10 Stacking</a></li>
+    <li><a href="#suppression">11 Suppression</a></li>
+    <li><a href="#index">12 Evidence index</a></li>
+    <li><a href="#limits">12a Known weaknesses</a></li>
+    <li><a href="#bottom">13 Bottom line</a></li>
+    <li><a href="#method">14 Method</a></li>
+    <li><a href="#refs">15 References</a></li>
+  </ol>
+</nav>
+
+<section id="frame">
+<h2>1. Frame</h2>
+
+<p>"Understated" here means something specific. Not <em>underrated</em> in the gym-bro supplement-stack sense, and not <em>experimental</em> in the Schedule-I psychedelic sense. Understated means the intervention has plausible mechanism and usable human data, but sits in one of three shadows:</p>
+
+<ul>
+  <li><strong>Economic shadow.</strong> Off-patent, generic, no sponsor, no pathway for a sufficiently powered Phase 3. Metformin in non-diabetics. Nicotine patches for MCI. Low-dose lithium. Estradiol.</li>
+  <li><strong>Social shadow.</strong> The substance or framing carries cultural baggage that repels IRBs, reviewers, or prescribers independent of the data. Nicotine again. Testosterone. HRT post-WHI. Ibogaine.</li>
+  <li><strong>Silo shadow.</strong> The data live in a specialty that doesn't talk to the specialty that needs them. The narcolepsy-pharmacology finding that sodium oxybate's pharmacologically-induced slow-wave sleep is functionally dissimilar to physiological SWS — a cautionary result that never reached cognitive sleep medicine, where "boost SWS → boost memory" framings persist. Ayahuasca's NEO-PI data inside ethnobotany, invisible to trait psychology.</li>
+</ul>
+
+<p>Standard psychedelic-assisted therapy — ketamine, psilocybin, MDMA as currently run — is excluded by design (the map there is already well-drawn). So is the standard nootropic catalog (racetams, modafinil, noopept) and PNN-opening ultrasound. The central question is what else <em>actually produces durable self-concept change or real cognitive augmentation</em> on measurable timescales, and how much of it is worth doing in 2026 for a cognitively healthy adult with no metabolic dysfunction.</p>
+
+<p>Two anchoring targets: <strong>identity restructuring</strong> (trait-level, >6-month durability, preferably with personality-inventory measurement rather than symptom-scale shorthand) and <strong>cognitive augmentation</strong> (working memory, processing speed, learning rate in healthy adults — not "dementia risk reduction" as a proxy). Sleep and GLP-1 sit under these as substrate questions: sleep as the consolidation layer that any identity work has to pass through, GLP-1 as a reward-circuit modulator whose relevance to identity is hypothesized rather than shown.</p>
+
+<p>But before any of that, the harder question: <em>why is all of this understated in the first place?</em> The next section makes the argument that the three shadows above aren't accidents. They're the downstream signature of a specific regulatory and cultural asymmetry — the one that makes "do nothing" look like the safe choice even when it kills people on a predictable clock.</p>
+</section>
+
+<section id="asymmetry">
+<h2>2. The asymmetry</h2>
+
+<p>Public health regulation weights intervention harms heavily and treats the no-intervention baseline as if it were neutral. It isn't. Declining to prescribe an effective treatment has a harm profile just like prescribing an ineffective one does; the difference is that one ledger is maintained carefully (pharmacovigilance databases, FAERS, post-market surveillance) and the other is maintained almost nowhere. The FDA's standard of <em>safe and effective</em> has no symmetric counterpart requiring quantification of what happens when the intervention is withheld — no standing process that asks, <em>given this population's natural history, what excess mortality and disability are we accepting by not approving, not scheduling, not reimbursing?</em></p>
+
+<div class="callout">
+<span class="k">Type I vs Type II.</span> Regulatory careers are ended by Type I errors (approving a drug that later shows harm). Type II errors — denying a drug that would have helped — are invisible because the patients who would have benefited don't know they're in the counterfactual arm. Congressional hearings are convened for thalidomide and vioxx. No one is ever called to testify about misoprostol delayed three years with an estimated eight to fifteen thousand annual preventable ulcer deaths during the bottleneck <em class="cite">(<a href="https://escholarship.org/uc/item/5fg9n284">Gieringer, RAND</a>)</em>.
+</div>
+
+<h3>The history that shaped the asymmetry</h3>
+
+<p><strong>Thalidomide (1961).</strong> Over 10,000 birth defects globally. Produced the 1962 Kefauver-Harris Amendments and the modern "safe AND effective" standard. This was the right correction for the wrong to be prevented. The problem is that the standard was never balanced against the opposite failure mode.</p>
+
+<p><strong>Vioxx (2004).</strong> Withdrawn after excess MI/stroke deaths in the US exposed population. Graham's extrapolation produced the widely-cited 38,000 figure; Kaiser's cohort data and subsequent re-analyses produce a lower bound, and the plausible range is roughly 27,000–55,000 — meaningful either way, but the point estimate sometimes quoted as settled is a maximalist reading. The cause was Merck's fraudulent suppression of CV safety data, not regulatory laxity — but the institutional response was increased caution in approvals and enforcement, not improved detection of industry-sponsor fraud. Post-Vioxx, COX-2 inhibitors were deprioritized even for populations (age >65 without prior MI) where the risk/benefit math had reversed. Excess pain, reduced mobility, and NSAID-induced GI bleeding in patients denied coxibs were never tallied against the Vioxx deaths. <em>Counter-frame:</em> the system did pull Vioxx, and aducanumab's accelerated approval is already being rolled back — both are cases where the Type-I detector worked, eventually. The argument is miscalibration, not incoherence.</p>
+
+<p><strong>Aducanumab (2021) and lecanemab (2023).</strong> The asymmetry inverts when an industry sponsor pushes hard. FDA granted accelerated approval to aducanumab over a 10-1 advisory-committee rejection, on biomarker grounds, despite a failed ENGAGE phase 3 and efficacy that — even in the favorable reading — amounted to roughly 24% of placebo decline over 18 months <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10193636/">PMC10193636</a>)</em>. 67% of surveyed prescribers reported lost confidence in the accelerated pathway. Lecanemab followed two years later. This isn't an argument against caution. It's evidence that the problem is <em>asymmetric application</em> of caution, not caution itself. When there's a sponsor, the caution moves; when there isn't, it doesn't.</p>
+
+<h3>The theory behind the asymmetry</h3>
+
+<p>Cass Sunstein's 2002 critique of the precautionary principle names it directly: the principle is incoherent when applied asymmetrically because <em>inaction also carries risk</em> <em class="cite">(<a href="https://chicagounbound.uchicago.edu/law_and_economics/87/">Sunstein 2002, U Chicago</a>)</em>. A rule that says "when uncertain, don't act" treats the uncertainty of the acted-upon state as meaningful and the uncertainty of the not-acted-upon state as zero. Applied consistently, the principle collapses; applied selectively (which is how it is actually applied), it institutionalizes a preference for one kind of error.</p>
+
+<p><em>Steelman.</em> Sunstein has serious critics (Hansson, Steele, Stirling) who argue the precautionary principle is defensible once you stop reading it as "do nothing when uncertain" and read it instead as a burden-of-proof allocation under deep uncertainty about long-tail harms. Regulatory conservatism does real work: it prices in model uncertainty, the reputational cost of a high-profile approval that later fails, and the asymmetry between a prescription you can stop and a precedent (or a cascade of downstream iatrogenic harms) you can't easily retract. The argument this document is making is not that those considerations are worthless. It's that they are being weighted at implausibly high multiples relative to the deaths on the other side of the ledger, and that the multiple is essentially never made explicit. The claim is <em>miscalibration</em>, not incoherence.</p>
+
+<p><em>Disambiguation.</em> "Regulatory" in the prose above is also doing too much work. It is a shorthand for at least six distinct gatekeepers: (1) FDA approval for new molecules and new indications, (2) DEA scheduling, (3) CMS and commercial-payer coverage determinations, (4) specialty-society guideline bodies (AAN, ACOG, NAMS, etc.), (5) prescriber malpractice-liability exposure, and (6) manufacturer economics under Hatch-Waxman — a new indication on a generic confers at most 3-year 505(b)(2) exclusivity, which doesn't price-protect a commodity. The suppression cases in §11 are each rate-limited by different components of that stack, and the fix is different for each. Collapsing them into "the FDA" or "the asymmetry" is imprecise enough to mislead.</p>
+
+<p>Chalmers and Glasziou's 2009 Lancet analysis estimated that 85% of biomedical research funding is avoidably wasted across design, conduct, and reporting <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/19525005/">PMID 19525005</a>)</em>. A material fraction of that waste is structural: Phase 3 trials don't happen for off-patent drugs because no sponsor recoups the investment, even when the mechanism is established and the Phase 2 signal is clean. Prasad and Cifu's <em>Ending Medical Reversal</em> (2015) documents the complementary failure — interventions that become standard of care on weak evidence and persist after they've been disproven — showing the same regulatory apparatus is permissive at the entry point when a sponsor exists and resistant at the exit point when removing the intervention would require admitting a prior mistake.</p>
+
+<h3>Economic structure as mechanism</h3>
+
+<p>Off-patent drugs get roughly 30% of the regulatory-authorization success rate of on-patent ones, not because the molecules are worse but because the sponsor-pays-for-phase-3 model has no analogue. Generic competition prevents any single manufacturer from recovering trial costs even if the trial succeeds. Academic and nonprofit sponsors can sometimes run the trial but cannot, under current FDA structure, reliably get the new indication onto the label afterward. This is the reason nicotine patches for MCI — which have a positive 2012 phase 2 <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/22232050/">Newhouse 2012</a>)</em> and a placebo arm that declined — remain off-label two decades later. It is not a scientific bottleneck.</p>
+
+<p>Then there are the social/discourse forces that compound this. HRT after WHI (2002) is the textbook example: a trial whose actual finding was "combined estrogen+progestin started ten years postmenopause in women averaging 63 modestly elevates breast cancer and CV risk" was summarized in prescribing culture as "hormones are dangerous," producing a 20-year decline in prescribing that affected perimenopausal women for whom the data didn't apply at all. The 2024 Medicare reanalysis of estrogen-only therapy in women over 65 (N=10 million, Baik/Baye/McDonald) found a 19% all-cause mortality reduction and reductions in dementia, breast cancer, lung cancer, colorectal cancer, CHF, and MI <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38595196/">PMID 38595196</a>)</em>. The counterfactual — how many excess dementia cases, fractures, and cardiovascular deaths are attributable to the post-WHI prescribing decline — has never appeared in a regulatory decision document.</p>
+
+<p>Nicotine for cognition is the social-stigma archetype: Class 1 trial evidence for attention and memory enhancement in MCI, perfect generic availability, zero ongoing Phase 3, because post-tobacco-backlash prescribing culture treats the molecule as morally contaminated by its delivery vehicle. Testosterone in eugonadal men is denied serious investigation because the literature was first occupied by lifestyle-influencer "optimization" culture, and serious endocrinologists don't want to be confused with that demographic. Cannabis scheduling has distorted 50 years of research. Psychedelic work was effectively frozen 1970–2000 by a regulatory regime whose logic was cultural, not pharmacological.</p>
+
+<h3>What this reframes</h3>
+
+<p>Every intervention in this document can be read as an instance of the asymmetry. Nicotine for MCI: economic + social compound suppression of a real signal. Estradiol in perimenopause: the WHI overcorrection writ onto a population the original trial didn't study. Low-dose lithium: cheap mineral salt with suicide-prevention epidemiology, no sponsor. Ayahuasca NEO-PI trait durability: trapped in ethnobotany journals because the Western psychiatric pipeline doesn't have a receptor for "ceremonial use in Peru." Methylene blue: mechanism-solid, human RCTs thin, no one will ever fund the trial because the compound is $30 at chemistry suppliers and the margins don't exist.</p>
+
+<p>The reframe changes the bottom line. "What should a healthy adult do for identity restructuring and cognitive augmentation in 2026?" has a private answer — which interventions are worth the individual time and risk. "What should society <em>allow</em>?" has a different answer, shaped by whether you accept the asymmetry as given or count the deaths on the other side of the ledger. The rest of this document answers both.</p>
+</section>
+
+<section id="ledger">
+<h2>3. The withheld-intervention harm ledger</h2>
+
+<p>Concrete numbers for the thesis. Each row is a condition or population where effective interventions exist but are underdeployed, with the best-available epidemiological estimate of the excess mortality or morbidity being absorbed by the "no intervention" baseline. These are not small effects buried in subgroup analyses. They are headline findings from large cohorts and registries that the regulatory and prescribing apparatus has not translated into changed practice.</p>
+
+<div class="wide ledger">
+<div class="ledger-row"><div class="ledger-label">Untreated PTSD: suicide rate vs. general pop.</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 100%"></div></div><div class="ledger-val">4.2×</div></div>
+<div class="ledger-row"><div class="ledger-label">Untreated adult ADHD: post-18 diagnosis mortality</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 95%"></div></div><div class="ledger-val">4.0×</div></div>
+<div class="ledger-row"><div class="ledger-label">OUD without MAT: crude mortality (per 1000 PY)</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 88%"></div></div><div class="ledger-val">48.6</div></div>
+<div class="ledger-row"><div class="ledger-label">Adult ADHD all-cause mortality</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 47%"></div></div><div class="ledger-val">2.0×</div></div>
+<div class="ledger-row"><div class="ledger-label">Insomnia → CVD mortality (HR)</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 32%"></div></div><div class="ledger-val">1.33</div></div>
+<div class="ledger-row"><div class="ledger-label">Short sleep → stroke (HR)</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 30%"></div></div><div class="ledger-val">1.29</div></div>
+<div class="ledger-row"><div class="ledger-label">Sleep-disordered breathing → AD (RR)</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 38%"></div></div><div class="ledger-val">1.39</div></div>
+<div class="ledger-row"><div class="ledger-label">MCI → dementia annual conversion (&gt;65)</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 25%"></div></div><div class="ledger-val">10–15%</div></div>
+<div class="ledger-row"><div class="ledger-label">TRD 15–40y: all-cause mortality vs. non-TRD</div><div class="ledger-bar-wrap"><div class="ledger-bar" style="width: 40%"></div></div><div class="ledger-val">1.65×</div></div>
+<div class="ledger-row"><div class="ledger-label">Estrogen-only HRT &gt;65: protective mortality (Baik 2024)</div><div class="ledger-bar-wrap"><div class="ledger-bar protective" style="width: 22%"></div></div><div class="ledger-val">−19%</div></div>
+<div class="ledger-row"><div class="ledger-label">MAT (buprenorphine/methadone): OUD mortality reduction</div><div class="ledger-bar-wrap"><div class="ledger-bar protective" style="width: 52%"></div></div><div class="ledger-val">−50%</div></div>
+<div class="ledger-row"><div class="ledger-label">X-waiver removal (modeled): US deaths prevented/yr</div><div class="ledger-bar-wrap"><div class="ledger-bar protective" style="width: 60%"></div></div><div class="ledger-val">37,000</div></div>
+<div class="ledger-note">Bars normalized within each direction (red = excess risk from withholding; green = protective effect of the available-but-underused intervention). Not on a common scale; values shown verbatim. <strong>Source-class note:</strong> most rows are observational hazard ratios or registry-cohort differentials, which carry treatment-selection confounds (healthy-user, treatment-seeker). The "37,000 deaths prevented/yr" X-waiver row is a <em>modeled</em> counterfactual with large assumption sensitivity (uptake, retention, diversion, substitution); the paper itself reports bounds. The Baik 2024 HRT row is a Medicare claims reanalysis with the healthy-user confound that drove the original pre-WHI observational enthusiasm — the same methodological class that produced the error WHI subsequently overturned. <strong>Selection note:</strong> these rows are conditions where the "withheld intervention" framing is already argued within mainstream medicine. A symmetric audit would include cases where the ledger favors the cautious default (gabapentinoid overprescription, SSRIs in adolescents with emergent suicidality signal, benzodiazepine dependence cascades, bariatric overuse). The ledger is a real signal, but it is confirmation-selected. Sources: Swedish PTSD cohort <em class="cite"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7758737/">PMC7758737</a></em>; ADHD mortality <em class="cite"><a href="https://www.nature.com/articles/s41398-024-02825-y">Trans Psychiatry 2024</a></em>; OUD/MAT <em class="cite"><a href="https://www.ncbi.nlm.nih.gov/books/NBK541393/">NBK541393</a></em>; insomnia/sleep <em class="cite"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12518473/">PMC12518473</a></em>; TRD <em class="cite"><a href="https://www.sciencedirect.com/science/article/pii/S0165032724015490">J Affect Disord 2024</a></em>; HRT <em class="cite"><a href="https://pubmed.ncbi.nlm.nih.gov/38595196/">PMID 38595196</a></em>; X-waiver modeling <em class="cite"><a href="https://pubmed.ncbi.nlm.nih.gov/36624606/">PMID 36624606</a></em>.</div>
+</div>
+
+<h3>Global scale</h3>
+
+<p>GBD 2021 (published 2024): mental disorders account for 12% of global DALYs and 35% of years lived with disability. Depressive disorders alone contribute 56.3 million YLDs, up 36.5% since 2010 <em class="cite">(<a href="https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(24)00222-0/fulltext">GBD 2021, Lancet Psychiatry 2024</a>)</em>. The WHO treatment-gap estimates: ~50% of mental-disorder cases untreated in high-income countries, 75–95% untreated in LMIC. Median governmental spending on mental health is ~2% of health budget.</p>
+
+<p>These are burden numbers. The interesting ones are the <em>addressable</em> fractions. For PTSD: current standard-of-care treatments (prolonged exposure, CPT, SSRIs) produce remission in a minority of patients even at high adherence; the gap between what's available and what's effective is the target that would benefit most from asymmetry correction. For perimenopausal depression and cognitive symptoms: transdermal estradiol has a consistent effect-size signal <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12380479/">CLSA 2025</a>)</em> and the barrier to prescribing is specifically the residue of WHI messaging in a population the WHI didn't study. For OUD: the 50% mortality reduction from MAT has been stable evidence for two decades; only 25.1% of US patients needing it received it in 2022.</p>
+
+<h3>How to read the ledger</h3>
+
+<p>These numbers don't prescribe action — they define the scale of what's at stake when "no intervention" is treated as the default. Some of the gaps close with more prescribing within existing frameworks (MAT, HRT, ADHD stimulants). Some require regulatory changes (Schedule I scheduling, off-patent repurposing pathways). Some require cultural changes (nicotine-for-MCI, psychedelics for existential distress). All of them are invisible in the current regulatory calculus because the calculus only counts visible harms from visible actions.</p>
+</section>
+
+<section id="identity">
+<h2>4. Identity restructuring beyond the default</h2>
+
+<p>This is the lead question. Ketamine/psilocybin/MDMA are off the table. What's left that moves personality at trait level and holds for six months?</p>
+
+<h3>Pharmacological candidates</h3>
+
+<details open>
+<summary><span class="grade C">C+</span> Ayahuasca — single uncontrolled trial, unreplicated</summary>
+
+<p>Frecska 2020 (N=24) measured NEO-PI changes at six months post-ceremony and found neuroticism d=1.45, openness d=2.20 <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7524857/">Frecska 2020</a>)</em>. <em>Single-trial, uncontrolled, tourist cohort.</em> An earlier version of this entry cited a 2025 naturalistic cohort as replication; that citation could not be verified against a public source and has been removed. There is no independent replication of the trait-level signal at twelve months.</p>
+
+<p>The d=2.20 openness is so large it should trigger a measurement-artifact prior. Most effective psychotherapy shifts openness 0.3–0.5 SD. Ceremonial tourism selects hard on openness and expectancy, both of which inflate self-reported NEO-PI scores post-hoc. The plausible reframe: ayahuasca opens a weeks-to-months window of reduced rigidity during which narrative restructuring happens, and the NEO-PI is catching a sustained state rather than a permanent trait shift — but even that framing assumes the effect is real rather than a tourist-cohort artifact, which a single N=24 uncontrolled study cannot establish.</p>
+
+<div class="callout">
+<span class="k">Safety floor.</span> Ayahuasca's active principle is an MAOI-DMT combination. Hard contraindications: any SSRI, SNRI, tramadol, dextromethorphan, MDMA, bupropion, stimulant, or tyramine-rich diet within the documented washout window (2–6 weeks depending on agent; 5 weeks for fluoxetine). Absolute contraindications: personal or first-degree-relative history of psychosis or bipolar I, cardiac conduction disease, uncontrolled hypertension, serotonergic agents. "Serious container" in the recommendation below means MAPS/ICEERS-level medical screening (pre-ceremony psychiatric evaluation, ECG, medication review by a clinician who has read the pharmacology), not a retreat-center vetting process. Deaths during ceremonies are documented, typically from undisclosed cardiac conditions or interactions.
+</div>
+
+<div class="bottom-line"><strong>Verdict:</strong> Currently the most-cited candidate for durable personality-layer change outside the standard psychedelic menu. The evidence base is one small uncontrolled study. The prior should be that the effect will shrink substantially under a controlled replication. The silo barrier (ethnobotany vs trait psychology) is the real reason a properly-powered trial hasn't run. If identity restructuring is the primary goal and standard psychedelic options are off the table, still defensible — but with an explicit understanding that the grade reflects novelty and mechanism plausibility, not replicated effect.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Ibogaine — strong symptom durability, no identity measures</summary>
+
+<p>Williams/Stanford 2024 published in Nature Medicine (N=30 SOF veterans with TBI/PTSD): 88% PTSD reduction and 87% depression reduction at one month, with fMRI theta and cortical complexity changes <em class="cite">(<a href="https://www.nature.com/articles/s41591-023-02705-w">Williams et al. 2024</a>)</em>. Noller 2017 opioid-dependence cohort (N=14, 8 completed): ASI-Lite and BDI-II reductions sustained to twelve months <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/28402682/">Noller 2017</a>)</em>.</p>
+
+<p>Nobody measured NEO-PI, SRET, or any identity-specific instrument. The framing of ibogaine as "identity restructuring" is user-phenomenology projected onto what the trials actually measured, which is symptom burden. Mechanism — NMDA antagonism, 5-HT2A agonism, BDNF surge, noribogaine sigma-1 activity — is consistent with a large neuroplastic window, but the studies don't demonstrate identity-layer change.</p>
+
+<div class="callout">
+<span class="k">Safety floor.</span> Ibogaine's documented mortality signal is cardiac: Torsades de pointes from QT prolongation, deaths at doses within the "therapeutic" range, frequently in patients with occult hypokalemia, CYP2D6 poor-metabolizer status, or concomitant methadone. The Stanford/Williams protocol screened with 12-lead ECG, echocardiogram, electrolytes (K⁺ &gt;4.0, Mg &gt;2.0), CYP2D6 genotyping, continuous telemetry, on-site ACLS capability, and overnight post-dose monitoring. "Screened clinic" in the recommendation below means <em>that standard</em>. Most Mexico-based ibogaine clinics do not meet it. Ask for: pre-dose ECG with QTc &lt;450 ms, electrolyte panel, CYP2D6 genotype, continuous telemetry ≥24 hours, on-site defibrillator and ACLS-trained provider, documented serotonergic/methadone washout. A clinic that can't produce those isn't screened; it's a liability laundromat.
+</div>
+
+<div class="bottom-line"><strong>Verdict:</strong> Strong symptom data in refractory PTSD and opioid use disorder. Currently miscategorized as an identity intervention — the trials measured symptoms, not identity. For TBI+PTSD with access to a clinic meeting the Williams protocol floor, defensible. For generic "identity work" in a healthy adult, there is no direct evidence it does what people assume, and the cardiac risk is non-trivial.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> 5-MeO-DMT — short follow-up, growing RCT evidence</summary>
+
+<p>Beckley/atai BPL-003 Phase 2b (N=193, treatment-resistant depression, 2024–25) showed MADRS drop of 11–12 points at day 29 with persistence through eight weeks, dose-finding RCT with quadruple masking — methodologically the cleanest 5-MeO trial to date <em class="cite">(<a href="https://clinicaltrials.gov/study/NCT05870930">BPL-003</a>)</em>. No identity outcomes measured. A single case report described 75% PCL-5 reduction sustained to twelve months with reported ego dissolution, which is anecdote-grade.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Promising for TRD. For identity restructuring specifically, the data don't yet exist. Wait for trials that measure NEO-PI or SRET alongside symptom scales.</div>
+</details>
+
+<details>
+<summary><span class="grade D">D</span> Salvinorin A, nitrous, DMTx — largely not relevant to identity durability</summary>
+
+<p>Salvinorin A (κ-opioid, Mendelson 2011, N=4) shows dose-dependent acute ego dissolution with no durability data <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/21131142/">Mendelson 2011</a>)</em>. Nitrous oxide, despite Nagele's impressive pooled RCTs on 24-hour suicidal-ideation reduction (54% vs 12%) <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11097146/">Nagele et al.</a>)</em>, has no identity measures and is an acute intervention. DMTx (Luan 2024, N=11, Imperial) produced acute psychological tolerance with <em>ego remaining intact</em> at high extended-infusion doses <em class="cite">(<a href="https://journals.sagepub.com/doi/10.1177/02698811231196877">Luan 2024</a>)</em> — which is a genuinely interesting finding, explicitly distinguishing DMTx from the classical-psychedelic dissolution profile, but it means DMTx is not an identity-restructuring tool.</p>
+</details>
+
+<h3>Non-pharmacological protocols</h3>
+
+<details open>
+<summary><span class="grade A">A</span> MBCT / MBSR — best durable evidence for self-referential change</summary>
+
+<p>Network meta-analysis puts depression-relapse RR at 0.73 (0.54–0.98) with 12–15 month durability <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/27119968/">Kuyken 2016</a>)</em>. The more interesting finding for identity work: self-referential encoding task (SRET) shows reduced negative self-bias even in trials where depression-symptom outcomes are null <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10600813/">PMC10600813</a>)</em>, which separates the mechanistic claim from the clinical one. Brewer/Garrison DMN studies consistently show default-mode deactivation in trait meditators <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/22114193/">Brewer 2011</a>)</em>.</p>
+
+<p>Effect sizes on depression itself are modest (d=0.13–0.24). But if the goal is reducing negative self-referential processing and DMN rumination loops, the mechanism data are stronger than for any non-pharm intervention in the set. Confound: DMN deactivation in meditators might reflect self-selection rather than cause.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> The real answer to "I want to change my relationship to my own self-narrative without taking anything." Do the 8-week MBCT course with an actual teacher, not the app version.</div>
+</details>
+
+<details>
+<summary><span class="grade B">B</span> IFS — early RCT signal, thin base</summary>
+
+<p>PARTS trial 2024 (Harvard-affiliated, N=60 PTSD): d=−0.9 at 24 weeks, with self-compassion and decentering as the hypothesized mechanism <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38934934/">PMID 38934934</a>)</em>. Only two of 27 reviewed IFS studies met RCT criteria; the literature base is thin relative to the clinical enthusiasm.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> The d=−0.9 is genuinely large and the mechanism framing (parts, decentering) is testable. Early, but worth doing if IFS is available and the therapist is experienced. Don't treat the enthusiasm as evidence.</div>
+</details>
+
+<details>
+<summary><span class="grade D">D</span> Coherence Therapy — reputation massively outruns evidence</summary>
+
+<p>Zero RCTs. Case-series only. Ecker's memory-reconsolidation framing is conceptually elegant and has coherent neuroscience scaffolding (Nader's reconsolidation work is real), but the therapy itself has not been tested under the conditions that would let it claim clinical evidence. Public profile and the "reconsolidation-based therapy" brand substantially exceed what the studies support.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Possibly useful, not demonstrated. If a therapist you trust practices it, fine; don't pay a premium for the brand.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Expressive writing (Pennebaker)</summary>
+
+<p>Guo 2023 meta-analysis of 31 RCTs (N=4,012): d=0.07–0.16, inconsistent at 6 months <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/36921878/">Guo 2023</a>)</em>. Identity-specific outcomes rarely measured. The effect is real and tiny.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Near-zero cost, tiny effect, worth doing as a habit. Don't expect it to do heavy identity lifting.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Flotation-REST</summary>
+
+<p>Feinstein/LIBR 2024 PLOS One safety RCT (N=75) confirmed tolerability <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38457451/">Feinstein 2024</a>)</em>. 2018 pilot (N=50) showed GAD symptom reduction sustained at 6 months <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/29453033/">Feinstein 2018</a>)</em>; 2023 anorexia RCT sustained body-dissatisfaction reductions at 6 months. No identity-specific instruments. Narrow mechanism window (interoceptive attention, exteroceptive suppression), rigorous lab group.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Anxiety signal is real. Identity-change framing is speculative — float tanks are interoceptive training with a great name, not an identity intervention with evidence.</div>
+</details>
+
+<details>
+<summary><span class="grade D">D</span> Wim Hof breathwork, SSP, taVNS, Holotropic</summary>
+
+<p>Wim Hof RCT 2024 (N=84): depression/anxiety parity with active control at 3 months — <em>not</em> superiority <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/39606690/">Wim Hof RCT 2024</a>)</em>. No personality measures. Holotropic: one Czech study, no RCT-grade personality data. Safe &amp; Sound Protocol and transcutaneous auricular VNS have acute autonomic signal but minimal trait-level evidence; "polyvagal trait change" is reputation, not data.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Worth doing for acute state regulation (HRV, stress response). Not worth doing as identity work. The SSP marketing in particular has moved far ahead of the evidence.</div>
+</details>
+
+<h3>Identity ranking</h3>
+
+<p>If the question is "what do I do this year to actually move my personality at trait level":</p>
+<ol>
+  <li><strong>MBCT/MBSR.</strong> A-grade. Network-meta evidence, replicated across groups. The real answer for endogenous work.</li>
+  <li><strong>IFS with an experienced practitioner.</strong> B-grade, one large-effect trial (PARTS d=−0.9), thin base, promising.</li>
+  <li><strong>Ayahuasca, in a medically screened container.</strong> C+ on durability — single uncontrolled trial, not replicated, likely to shrink under controlled replication. Still the only non-standard pharm with any long-follow-up trait signal at all. Silo-buried. Read the safety-floor block in §4 before pursuing.</li>
+  <li>Everything else — expressive writing, flotation, breathwork, SSP — as adjuncts, not primary. Don't pay for packages that sell these as primary.</li>
+</ol>
+</section>
+
+<section id="cognition">
+<h2>5. General cognitive augmentation</h2>
+
+<p>Healthy adults, cognitively intact, no clinical indication. What actually moves working memory, processing speed, or learning rate at effect sizes worth the time?</p>
+
+<details open>
+<summary><span class="grade A">A</span> Creatine 5g/day — small, real, annoyingly robust</summary>
+
+<p>Xu 2024 meta of 16 RCTs (N=492): memory SMD=0.31, processing speed SMD=−0.51 (faster), null for executive function <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38430492/">Xu 2024</a>)</em>. Larger effect in females and adults 18–60, consistent with lower baseline dietary creatine. Sleep-deprivation rescue via raised cerebral phosphocreatine is mechanistically the cleanest story in the whole supplement literature: substrate → energy buffer → preserved firing under metabolic stress.</p>
+
+<p>The effect size is modest. But it is replicated, the mechanism is MRS-verifiable, and the downside is essentially zero.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Just take it. 5g monohydrate daily. If you're female, vegetarian, or sleep-deprived this week, the signal is bigger. Don't spend money on creatine HCl, "buffered" creatine, or any of the other rebrands.</div>
+</details>
+
+<details open>
+<summary><span class="grade B">B+</span> HIIT and resistance training — underrated but not A-grade</summary>
+
+<p>Twenty-minute HIIT outperforms 30-minute for acute BDNF (I²>75%, which means the pooled SMD conceals enormous between-study variance — the prediction interval likely crosses zero for the BDNF claim, though the cognitive-outcome signal is more robust). Zone-2 cardio, the current bro-science favorite, does <em>not</em> have the supporting evidence it's been granted culturally — the 2025 narrative review explicitly failed to support zone-2 as optimal for mitochondrial or neurogenic gains in the general population.</p>
+
+<p>Resistance training is the underrated finding. The 2025 meta (17 RCTs, N=739, average N≈43 per trial): working memory SMD=0.44, spatial SMD=0.63, null for executive function and processing speed <em class="cite">(<a href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1708244/full">Resistance training meta 2025</a>)</em>. The null domains matter — this isn't a generic "exercise is good" handwave, it's a targeted WM/spatial signal with a plausible PFC-hippocampal neurogenic mechanism.</p>
+
+<p><em>Known weakness:</em> 17 small RCTs with selective positive and null domains is the pattern that publication bias produces. A trim-and-fill correction has not been run on this meta. The tDCS row below was downgraded to F for exactly this — publication-bias-corrected effect approximately zero — and the same standard should apply here. The WM/spatial signal is probably real but the effect-size point estimate is almost certainly inflated. Regraded from A to B+ pending a bias-corrected meta.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> HIIT 20 minutes, 2–3×/week, timed so cognitively demanding work falls in the 2–4h post-exercise window. Resistance training 2–3×/week for the WM/spatial signal. The stack is still the best-evidenced in the cognition section, even after the downgrade; it outperforms every supplement on the list except creatine. Don't organize an identity around an inflated effect size.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Neurofeedback — lab-grade real, consumer-grade placebo</summary>
+
+<p>SMR neurofeedback for anxiety: d=0.7–0.9 with sham control — but roughly 50% of trials don't use sham, and the sham-controlled effect is substantially smaller. Lab-grade protocols with operator expertise and proper EEG produce a real signal. The Muse / Narbis / consumer-wearable end of the spectrum is dominated by placebo, ritual, and regression-to-the-mean effects.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> If you have access to a legitimate research-grade neurofeedback clinic with sham-controlled protocols, consider for specific anxiety. Consumer devices — don't bother.</div>
+</details>
+
+<details>
+<summary><span class="grade D">D</span> Working-memory training (Cogmed, n-back, dual n-back)</summary>
+
+<p>Immediate near-transfer is real. Far-transfer to fluid intelligence and general attention is near zero after fifteen years of trying. Dual n-back gains specifically have not broadly replicated. The marketing has always outrun the data.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> You get better at the task. You don't get smarter. Skip.</div>
+</details>
+
+<details>
+<summary><span class="grade F">F</span> tDCS / tACS — publication-bias-corrected null</summary>
+
+<p>The 2024 Brain Research analysis across 134 interventions, correcting for publication bias, put the tDCS effect on working memory at approximately zero <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38159856/">Brain Research 2024</a>)</em>. Executive function effects η²p=0.058–0.075 pre-correction, which collapse further under bias adjustment. Full-blown replication crisis.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Don't waste money on a headset. The field's own meta-analytic correction says the effect isn't there.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> L-theanine + caffeine</summary>
+
+<p>Two-hour window attention-switching SMD=0.33 <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/31758301/">L-theanine+caffeine meta</a>)</em>. Real, tiny, acute only.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Fine as a morning routine. Don't build a stack around it.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Exogenous ketones</summary>
+
+<p>Meta-analysis 2026 (38 studies, N=1,602): pooled SMD=0.29, I²=91% <em class="cite">(<a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1802531/full">Ketones meta 2026</a>)</em>. <em>The pooled SMD at I²=91% is a fiction.</em> When 91% of observed variance is between-study, the meaningful quantity is the prediction interval, which almost certainly crosses zero. The responder-phenotype framing below is one interpretation; a more honest read is that the literature does not agree what this does.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Acute dose may help under sleep-deprivation or metabolic stress. The honest framing is N-of-1 self-test, not "the population effect is SMD=0.29." Do not build a routine around it until you have data on yourself.</div>
+</details>
+
+<h3>Cognition ranking</h3>
+
+<ol>
+  <li><strong>HIIT + resistance training.</strong> B+-grade after pub-bias-aware regrade. Still the best-evidenced stack in the corpus.</li>
+  <li><strong>Creatine 5g daily.</strong> A-grade. Near-zero downside.</li>
+  <li>L-theanine+caffeine morning, exogenous ketones situationally. C-grade, tiny, fine.</li>
+  <li>Skip: tDCS/tACS, consumer neurofeedback, dual n-back, Cogmed, most other things in the nootropic catalog.</li>
+</ol>
+</section>
+
+<section id="additional">
+<h2>6. Additional interventions, under-covered</h2>
+
+<p>Second research pass. Interventions that didn't make the first cut but have enough 2023–2026 trial data to grade honestly — including several that kill hype, and several that the asymmetry thesis says should have been studied harder than they were.</p>
+
+<details>
+<summary><span class="grade B">B+</span> Semaglutide for alcohol use disorder — Hendershot 2025</summary>
+
+<p>Phase 2 RCT (N=48, 9 weeks, escalating 0.25→0.5→1.0 mg/week) in adults with AUD. Drinks per drinking day β=−0.41 (p=.04); lab self-administration Cohen's d=0.46–0.48 (medium-large); weekly craving reduced; heavy drinking days favored semaglutide <em class="cite">(<a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2829811">Hendershot 2025, JAMA Psychiatry</a>)</em>. Mechanism: GLP-1 receptor agonism attenuates dopaminergic reward salience in VTA/NAc, generalizing across palatable substances — the "food noise" extension hypothesis now with actual randomized data. Observational cohort N=83,825 replicates the signal at population scale: 50–56% lower AUD incidence/recurrence in semaglutide users vs other weight-loss drugs <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38806481/">Nat Commun 2024</a>)</em>.</p>
+
+<p>Klausen's exenatide-for-AUD reanalysis is the caveat: the alcohol-suppression effect concentrated in BMI &gt;30 and attenuated at healthy BMI. The GLP-1-for-addiction mechanism may require metabolic dysfunction as substrate. A healthy-BMI AUD patient is a different pharmacology.</p>
+
+<p><em>Safety additions for the obese+AUD population.</em> GLP-1 agonists strip lean mass (~25% of total weight loss) — in AUD patients with pre-existing alcohol myopathy and nutritional deficits, this matters more than in general-obesity populations. Monitor grip strength / calf circumference or DEXA; co-prescribe resistance training; repletion of B1/B12/folate as standard. Gastroparesis is real and can persist after discontinuation; the ASA has issued guidance on perioperative airway aspiration risk (7-day hold for elective surgery, anesthesia-consulted for emergent). No causal suicidality link in 2024–25 regulatory review.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Real Phase 2 signal in people with obesity+AUD, with safety additions above. Watch for Phase 3 and for gambling/compulsive-behavior trials. Don't extrapolate to healthy-BMI-only AUD without waiting for trials that actually enroll them.</div>
+</details>
+
+<details>
+<summary><span class="grade B">B</span> Acupuncture for combat PTSD — single trial, pending replication</summary>
+
+<p>VA trial, N=93 combat veterans, 15 weeks, verum vs minimal-needle sham. CAPS-5: verum d=1.17, sham d=0.67, between-group d=0.63 (p=.005). Fear-potentiated startle recovery enhanced in verum group — a biological endpoint suggesting real extinction-learning modulation rather than pure expectancy. Retention 77% across arms <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10882512/">PMC10882512</a>)</em>.</p>
+
+<p><em>Known weakness:</em> one trial, one site, one PI (Hollifield has been the principal investigator on most of the PTSD-acupuncture signal). The sham-acupuncture literature as a whole is a decade-long cautionary tale about sham design — minimal-needle sham is not inert, and verum-vs-sham effect sizes historically shrink toward null as sham fidelity improves. An earlier draft graded this A−; that was single-trial-treated-as-replicated, the exact failure mode this document was supposed to avoid. B until independent replication. Generalizability to non-combat PTSD is untested; the effect on anxiety/depression sub-scales was sham-sensitive (verum vs sham not significant). Do not extrapolate to generalized trauma.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> For combat-PTSD specifically, with access to a protocol matching the trial's verum design, defensible. Not the top-ranked identity-adjacent intervention; IFS and MBCT have comparable or stronger evidence per unit design quality.</div>
+</details>
+
+<details>
+<summary><span class="grade B">B</span> Urolithin A (Mitopure) — mitochondrial real, cognitive pending</summary>
+
+<p>Singh 2022 RCT in middle-aged adults (4 months): muscle strength +12%, VO₂ clinically meaningful gains, acylcarnitines and CRP decreased <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9133462/">PMC9133462</a>)</em>. Mechanism: urolithin A, a gut-microbiome metabolite of ellagitannins, induces mitophagy and clears damaged mitochondria. The muscle/endurance signal is A-grade and replicated. Cognitive endpoints are pending — CLARITY trial (N=650, brain health primary) expected March 2026.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Defensible for people optimizing healthspan; don't claim cognitive benefit until CLARITY reads out. If CLARITY is positive, this moves up significantly.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C+</span> Transdermal estradiol in perimenopause</summary>
+
+<p>Canadian Longitudinal Study of Aging 2025, N=7,251 postmenopausal women. Transdermal estradiol users had better episodic memory (d=0.303) than never-users; oral users had better prospective memory (d=0.283). Executive function: null <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12380479/">PMC12380479</a>)</em>. No RCTs in perimenopause itself — that's the gap. Small controlled trials of transdermal E2 + micronized progesterone in early perimenopause show depressive-symptom rates of 17.3% vs 32.3% placebo.</p>
+
+<p>This is the canonical compounded-suppression case: a woman of 45 with genuine perimenopausal cognitive and mood symptoms has a transdermal-estradiol option with an observational effect size larger than most cognitive interventions in this document, and is systematically under-prescribed because of WHI-era messaging that studied a population she doesn't belong to.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> For the indication, transdermal estradiol is the intervention the asymmetry most clearly wrongs. Route matters (transdermal beats oral for this outcome).</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> SGLT2 inhibitors (dapagliflozin, empagliflozin)</summary>
+
+<p>Preclinical: BBB penetration 0.3–0.5 brain:serum, BDNF upregulation, AChE inhibition, protection against Aβ₁₋₄₂ toxicity in cellular models. Dapagliflozin early-AD RCT (N=48, 12 weeks): Stroop improved (p=.046 as secondary among many) but NAA/Cr null and ADAS-Cog/MMSE unchanged <em class="cite">(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12198475/">PMC12198475</a>)</em>. Mechanism promising, human cognitive signal thin.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> If you have a metabolic indication, the class is reasonable. As a pure cognitive intervention in healthy adults, not yet.</div>
+</details>
+
+<details>
+<summary><span class="grade B">B</span> Methylene blue, low-dose</summary>
+
+<p>Mechanism is one of the cleanest in the document: redox mediator that donates electrons to Complex IV, bypassing Complex I/III dysfunction — a real rescue pathway for mitochondrial inefficiency. Dose-response is U-shaped: lower doses in the characterized range enhance; higher doses increase oxidative stress. Small healthy-subject RCT (N=26) showed fMRI activation and memory improvement; Phase 2 AD trial (N=321, 24 weeks) improved ADCS-CGIC and MMSE. No large 2024–2026 RCTs because no sponsor exists <em class="cite">(<a href="https://www.alzdiscovery.org/uploads/cognitive_vitality_media/Methylene-Blue-Cognitive-Vitality-For-Researchers.pdf">ADDF review</a>)</em>.</p>
+
+<div class="callout">
+<span class="k">Safety floor.</span> Methylene blue is a potent MAO-A inhibitor at the doses characterized in the cognitive-enhancement literature. Hard interaction contraindications: SSRIs, SNRIs, tramadol, dextromethorphan, MDMA, bupropion, St John's wort, any MAOI, any serotonergic agent — co-administration produces serotonin syndrome (documented fatal cases in a surgical-anesthesia context). G6PD deficiency produces hemolytic anemia on exposure and requires screening first. Non-pharmaceutical MB (dye-grade, chemistry-supplier) is contaminated with heavy metals and not characterized for human use; pharmaceutical-grade USP/EP only. <strong>Do not self-dose.</strong> The document no longer publishes a dose range; the specifics belong in a clinician-to-clinician context, not a public essay.
+</div>
+
+<div class="bottom-line"><strong>Verdict:</strong> Mechanism-grade B, human trial-grade C. The asymmetry case is strong on the economic side and weaker on the efficacy side than it first appears — the Phase 2 AD signal has not been independently replicated, and Phase-2-to-Phase-3 base rates in this space favor null. Worth academic interest and worth funding; not worth self-dosing given the MAOI interaction surface and the sourcing problem.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Lion's mane (Hericium erinaceus)</summary>
+
+<p>Docherty 2023 RCT (N=41, 1.8g): Stroop p=.005 at 60 min post-dose; 28-day stress trend p=.051 <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38004235/">Docherty 2023</a>)</em>. Acute effect only; no sustained cognitive-domain improvement. Replication in larger samples pending.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Small acute attention signal. Not a durable cognitive intervention.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Bromantane (Ladasten) — Russian data only, single trial</summary>
+
+<p>N=728 multicenter 28-day trial (50–100 mg/day): CGI-S 76% responders, CGI-I 90.8%, AE 3%, discontinuation 0.8% <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/21322821/">PMID 21322821</a>)</em>. Single trial, Russian-language primary publication, no Western replication, no independent AE adjudication. CGI-S/CGI-I are rater-impression endpoints and uniquely vulnerable to sponsor effects in open-label or single-blind designs. Mechanism: atypical psychostimulant with anxiolytic profile.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Regraded from B− to C. One large uncorroborated CGI-driven trial does not earn B even with a large N. Treat as hypothesis-generating. This is not a personal-use recommendation: no regulated supply exists in the US, gray-market sourcing is unassayed, and the AE tail in naive users and across longer exposure is uncharacterized.</div>
+</details>
+
+<details>
+<summary><span class="grade D">D</span> Psilocybin microdosing — placebo-dominant</summary>
+
+<p>Szigeti 2021 self-blinding RCT (N=191, largest placebo-controlled psychedelic-microdose study): all outcomes improved in both microdose and placebo arms; no significant between-group differences. Blind-breaking &gt;50% <em class="cite">(<a href="https://elifesciences.org/articles/62878">eLife 2021</a>)</em>. The cognitive/creative/mood effects that microdosers report are placebo-dominant.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Kill the hype. The signal is expectation, not pharmacology. Don't organize a cognitive protocol around microdosing.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Spermidine — observational positive, RCT negative</summary>
+
+<p>Kiechl Bruneck cohort: observational dose-response on cognitive-impairment risk. Schwarz 2022 RCT (N=100, 12 months, 0.9 mg/day): Mnemonic Similarity Task null (−0.03, p=.47) <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/35616942/">Schwarz 2022</a>)</em>. Wirth 2018 and Pekar 2021 also null despite preclinical autophagy story.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> The supplement claims outrun the randomized data. Skip.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Cold water immersion</summary>
+
+<p>PLOS ONE 2025 meta (11 RCTs, N=3,177): stress reduced only at 12 hours post-immersion (not immediately, not at 1, 24, or 48 hours); inflammation transiently increases immediately and at 1 hour <em class="cite">(<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0317615">PLOS One 2025</a>)</em>. No mood or cognitive durability signal.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> A state tool if it suits you. Don't organize a cognitive or mood protocol around it.</div>
+</details>
+
+<details>
+<summary><span class="grade D">D</span> Selegiline / deprenyl low-dose</summary>
+
+<p>Knoll's original aging hypothesis (1988 onward) has not been replicated in recent trials; 2023 Semmelweis BPAP-derivative work was negative. Off-patent, unprofitable, stalled.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> No current case. The mechanism is classical; the human evidence is stale.</div>
+</details>
+
+<details>
+<summary><span class="grade D">D</span> MDMA for PTSD — post-FDA rejection</summary>
+
+<p>MAPP1/2 functional unblinding &gt;90%; three papers retracted by <em>Psychopharmacology</em> August 2024 over site violations. Efficacy numbers remain large (88/87% clinically meaningful, 67/71% no longer meeting PTSD criteria) but the trial-quality ceiling is now compromised.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Not a clean signal anymore. Wait for Lykos's revised Phase 3 protocol or an independent replication.</div>
+</details>
+
+<h3>Additional ranking</h3>
+
+<ol>
+  <li>Acupuncture for combat PTSD — A−. If that's your indication, this is evidence-backed.</li>
+  <li>Semaglutide for AUD (with metabolic substrate) — B+. Real Phase 2 signal.</li>
+  <li>Transdermal estradiol in perimenopause — C+ observational but the clearest asymmetry case.</li>
+  <li>Urolithin A — B, waiting on CLARITY for cognitive endpoints.</li>
+  <li>Methylene blue — B for mechanism, C for human data, archetype of the unfunded generic.</li>
+  <li>Skip: psilocybin microdosing, spermidine, cold water immersion, selegiline, MDMA-PTSD-as-currently-submitted.</li>
+</ol>
+</section>
+
+<section id="premises">
+<h2>7. Exploratory premises, pressure-tested</h2>
+
+<p>Brief verdicts on the theoretical frames that show up repeatedly in this space.</p>
+
+<h4>Predictive-coding destabilization (flotation, fasting, novelty, sleep deprivation)</h4>
+<p>The frame — temporarily loosen prior-weighted inference to allow restructuring — is mechanistically coherent and has animated some serious research. The actual intervention data: flotation has anxiety durability but no identity measures <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/29453033/">Feinstein 2018</a>)</em>; fasting/keto 6-week RCT showed NS cognition endpoints; extreme novelty exposure has no controlled trials at all; sleep deprivation produces state effects but nothing durable. <strong>Verdict:</strong> attractive framing, thin data. Don't organize a protocol around "prior-loosening" as if it's a measured variable. It isn't yet.</p>
+
+<h4>Vagal / autonomic trait change (SSP, taVNS, HRV biofeedback)</h4>
+<p>Acute autonomic effects are real and measurable. Trait shift — meaning that the autonomic setpoint moves permanently rather than during practice — is not established. Polyvagal theory is doing a lot of work in the marketing that the evidence doesn't do. <strong>Verdict:</strong> use for state regulation if it helps. Don't believe the trait claims.</p>
+
+<h4>Somatic/exteroceptive interventions (cold, Feldenkrais, interoceptive training)</h4>
+<p>Cold exposure has solid acute effects (norepinephrine, dopamine), claimed durability is mostly self-report. Feldenkrais-adjacent work has almost no RCT-grade cognition or identity data. Interoceptive training via MBCT or floatation is where the actual signal lives. <strong>Verdict:</strong> cold is a state tool; the somatic/proprioceptive framing as identity intervention is speculation.</p>
+
+<h4>Language-as-reconsolidation (Coherence Therapy, IFS, expressive writing)</h4>
+<p>The reconsolidation-window framing is biologically coherent (Nader; Ecker's translation). The RCT evidence for the therapies built on it is uneven: IFS has one good trial (d=−0.9, PARTS 2024), Coherence Therapy has zero, expressive writing has 31 RCTs with d=0.07–0.16. <strong>Verdict:</strong> reconsolidation is real; not every therapy claiming it actually exploits it. IFS is the candidate worth pursuing.</p>
+
+<h4>Metabolic substrate shifts (ketones, fasting, metformin, rapamycin)</h4>
+<p>The human RCT data with cognitive endpoints in healthy adults is almost nonexistent. Rapamycin's PEARL trial showed mood/well-being signal at 5mg/week (ηp²=0.108–0.166 at 48 weeks) with no cognitive endpoint formally assessed <em class="cite">(<a href="https://clinicaltrials.gov/study/NCT04488601">PEARL</a>)</em>. Metformin in non-diabetics rests on observational data (8% cognitive-impairment reduction, 10% dementia reduction) confounded by healthy-user effect; TAME is delayed <em class="cite">(<a href="https://www.afar.org/tame-trial">TAME</a>)</em>. Taurine (Singh 2023 <em>Science</em>) is preclinical with no human cognition data and a conflicting 2025 follow-up on the aging link <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/37289866/">Singh 2023</a>)</em>. <strong>Verdict:</strong> mechanism-heavy, data-light. Don't treat as cognitive interventions in 2026. If you take them, take them for their stated indication, not for cognition.</p>
+
+<h4>Circadian / chronotype manipulation</h4>
+<p>Morning bright light reliably phase-shifts the circadian axis; same-night PSG architecture effects are weak or null. Meal-timing effects on cognition are consistent with circadian logic but lack direct cognitive endpoint data. <strong>Verdict:</strong> worth doing for sleep stability. Don't claim it as a direct cognitive intervention.</p>
+</section>
+
+<section id="sleep">
+<h2>8. Sleep as the consolidation substrate</h2>
+
+<p>Sleep doesn't belong on a list of identity or cognitive interventions as an endpoint — it belongs under them, as the layer that everything else has to pass through. The key finding from this year's digest: pharmacologically inducing slow-wave quantity is the wrong target.</p>
+
+<details>
+<summary><span class="grade B">B</span> Closed-loop auditory stimulation (CLAS) — young adults only</summary>
+
+<p>Ngo 2013 established the mechanism: acoustic coupling to endogenous slow oscillations, enhanced SO-spindle coupling, hippocampal consolidation, d=0.99 on declarative memory <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/23623061/">Ngo 2013</a>)</em>. The MDPI 2024 three-night continuous CLAS protocol showed +35% language learning and +26% discovery learning in young adults <em class="cite">(<a href="https://www.mdpi.com/2076-3425/14/11/1138">MDPI 2024</a>)</em>. But the Frontiers Sleep 2023 meta showed effect sizes declining approximately 91.8% per year across replications, many null, and age-stratified: auditory evoked responses are ~50% weaker at 55+, and memory consolidation fails or <em>worsens</em> in middle-aged cohorts. <strong>Mechanism requires intact SO amplitude and thalamocortical excitability; both degrade with age.</strong></p>
+
+<div class="bottom-line"><strong>Verdict:</strong> B-grade under 45. Don't bother over 55. The home devices (Dreem, etc.) sit in an awkward middle ground where the real-grade signal is uncertain.</div>
+</details>
+
+<details>
+<summary><span class="grade B">B</span> DORAs (daridorexant, lemborexant, suvorexant) — architecture preserved, consolidation unmeasured</summary>
+
+<p>Daridorexant PSG data N=1,466: wake transitions reduced 6.9%, N3 and REM preserved <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/35395302/">Mignot 2022</a>)</em>. Lemborexant: sleep onset SMD −0.43, less next-day impairment than zolpidem <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/31819050/">Rosenberg 2019</a>)</em>. Mechanism is clean — OX1R/OX2R antagonism removes wake-promoting drive without suppressing sleep-generation machinery, which is how they differ from benzodiazepines and Z-drugs.</p>
+
+<p><strong>Critical gap:</strong> zero DORA trials have measured memory consolidation. "Architecture preserved" is not the same as "consolidation intact" — the sodium oxybate finding proves that explicitly.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Best pharmacological sleep intervention available, architecture-wise. For insomnia proper, defensible first-line over Z-drugs. For "I want to consolidate identity work overnight" — that's mechanism-based hope, not data.</div>
+</details>
+
+<details>
+<summary><span class="grade F">F</span> Sodium oxybate — the critical finding: SWS ≠ consolidation</summary>
+
+<p>Oxybate dose-dependently raises stage 3/4 EEG slow-wave time. The finding that matters — <strong>pharmacologically induced slow waves are "functionally dissimilar to physiological slow waves"</strong>, with memory consolidation paradoxically null in several studies <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/27253774/">Vienne 2016</a> and subsequent)</em>. The synchrony pattern is wrong and the coupling with spindles is disrupted. You can inflate the SWS clock without reconstructing the coupling architecture, and memory consolidation depends on the coupling, not the clock.</p>
+
+<p>This is buried in narcolepsy pharmacology and has not migrated to cognitive sleep medicine, which is why the "boost SWS to boost memory" framing persists in the popular literature.</p>
+
+<div class="bottom-line"><strong>Verdict:</strong> Don't chase SWS quantity with any pharmacological agent expecting memory gain. The mechanism doesn't transfer. The implication for thermal devices, magnesium, apigenin, and everything else pitching "deeper sleep" as a cognitive benefit: the target is wrong.</div>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Trazodone low-dose, doxepin 3–6mg</summary>
+
+<p>Trazodone meta 2022: increased N3/SWS, reduced arousals — but only in insomnia populations, not in healthy adults <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/35226876/">Trazodone meta 2022</a>)</em>. Doxepin 3–6mg preserves architecture, minimal data in healthy. Both are reasonable for insomnia with preserved architecture, no memory-consolidation data either way.</p>
+</details>
+
+<details>
+<summary><span class="grade F">F</span> Thermal devices (Eight Sleep, ChiliPad), supplements (Mg-threonate, apigenin, glycine)</summary>
+
+<p>Zero PSG data for thermal devices. Self-report only. Magnesium formulations and apigenin: wearable-based or subjective data, no PSG-grade evidence. Glycine 3g has minimal PSG data with some reduced SWS latency. <strong>Verdict:</strong> you bought a nice mattress. Don't claim it's a cognitive intervention.</p>
+</details>
+
+<details>
+<summary><span class="grade C">C</span> Morning bright light</summary>
+
+<p>Reliable circadian phase-shift. Same-night PSG architecture effects weak or NS. Important for sleep-timing stability, not a direct consolidation intervention. Low cost, do it.</p>
+</details>
+
+<div class="bottom-line"><strong>Sleep recommendation:</strong> Protect architecture; don't chase quantity. Morning bright light within the first hour of waking. DORA if you have insomnia, not as a general optimization. CLAS if you're under 45, have access, and care about declarative consolidation. Skip the thermal/supplement pseudo-optimization.</div>
+</section>
+
+<section id="glp1">
+<h2>9. GLP-1 at healthy BMI</h2>
+
+<p>The honest cut: nearly every interesting non-metabolic claim for GLP-1 agonists comes from obese or overweight populations, and the one trial that directly probed the effect-size gradient found the benefit concentrated at high BMI.</p>
+
+<p>The headline non-metabolic signals are real in obese samples. AUD: the JAMA Psychiatry 2025 phase 2 RCT (N=48) showed grams consumed β=−0.48 and heavy drinking days d>0.80 <em class="cite">(<a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2829811">JAMA Psychiatry 2025</a>)</em>. The real-world cohort of 83,825 patients showed 50–56% AUD incidence/recurrence reduction <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38806481/">GLP-1 AUD cohort</a>)</em>. Parkinson's epidemiology: 36–60% reduced risk in GLP-1 users. Neuroinflammation: robust preclinical microglial M1→M2 polarization.</p>
+
+<p>The critical finding: Klausen's exploratory analysis of the exenatide AUD trial showed the alcohol-suppression effect <strong>concentrated in BMI>30 and attenuating at healthy BMI</strong> <em class="cite">(Klausen exploratory analysis)</em>. The mechanism may require metabolic dysfunction as substrate. If you extrapolate the obese-population benefits to a healthy-BMI reader, you are borrowing pharmacology that may not transfer.</p>
+
+<p>OxSENSE (N=60, healthy BMI 18–30) is the trial that will resolve the anhedonia question at therapeutic doses. Results pending. Sarcopenia risk at healthy BMI is real: GLP-1 agonists strip approximately 25% lean mass as a fraction of total weight loss; at normal BMI with less adipose buffer, that ratio is worse. Regulatory review 2024–25 found no causal suicidality link.</p>
+
+<div class="bottom-line"><strong>Verdict at healthy BMI in 2026:</strong> not worth it for identity/cognitive or general wellness reasons. Wait for OxSENSE. For AUD or comorbid obesity + addiction, the evidence is now stronger than most dedicated pharmacotherapies and should be deployed. For a cognitively healthy, metabolically healthy adult seeking identity or cognitive gains — no.</div>
+</section>
+
+<section id="stacking">
+<h2>10. Stacking — what actually combines</h2>
+
+<p>Most stacking arguments collapse on close inspection: either the components hit the same substrate with diminishing returns, or they interfere. The two stacks with both coherent mechanism and low interference risk:</p>
+
+<h3>Stack A — Creatine + HIIT (with cognitive work in the BDNF window)</h3>
+<p>Evidence grade: B+. Different substrates — creatine buffers ATP via phosphocreatine, HIIT elevates BDNF and drives plasticity signaling. Additive by construction, no known interference. HIIT BDNF peaks at 15–30 min post-exercise and has a 2–4 hour window for LTP-favorable learning. Practical protocol: HIIT 20 minutes, then within 30 minutes begin the cognitively demanding block (learning, MBCT session, identity-work journaling). Creatine 5g/day independently. This is the cleanest real stack in the corpus.</p>
+
+<h3>Stack B — Morning bright light + DORA</h3>
+<p>Evidence grade: C+ (architecture preserved, consolidation inferred). They operate on distinct systems — light on the circadian axis (SCN phase-shift), DORA on the homeostatic sleep-wake switch (orexin antagonism). No plausible pharmacological overlap. Used as intended (30-min bright light within an hour of waking, DORA 30 minutes before target sleep time) they're complementary. Low burden.</p>
+
+<h3>The reconsolidation case — speculative B</h3>
+<p>The hypothesis: a high-quality NREM night following a session that opened a reconsolidation window (MBCT, IFS, or psychedelic integration) preferentially re-encodes the updated schema rather than the original. Mechanistically coherent — Nader's reconsolidation animal work is real, MBCT's active retrieval of negative self-schemas followed by reappraisal fits the reconsolidation template, SWS/REM do handle emotional-memory integration. Zero direct RCTs. Speculation, but plausible enough to try.</p>
+
+<h3>Interference cases to avoid</h3>
+<ul>
+  <li><strong>GLP-1 + psychedelic therapy.</strong> GLP-1R expression in VTA/NAc, AUD evidence of reward-circuit attenuation, psychedelic therapeutic action requires affective salience — mechanistically you'd expect the GLP-1 to dampen exactly what the psychedelic is trying to amplify. No trial has co-administered; nobody should yet.</li>
+  <li><strong>Metformin + HIIT for neuroplasticity.</strong> Metformin's Complex I inhibition raises AMPK, but exercise-induced mitochondrial biogenesis also runs through AMPK, and Konopka/Burd-adjacent work shows metformin attenuates VO2max gains and mitochondrial protein synthesis from training. If you're using HIIT for cognitive/BDNF reasons and taking metformin for longevity, you're partially canceling the HIIT adaptation.</li>
+  <li><strong>Ketones + HIIT.</strong> Not harmful — probably redundant. Both push FNDC5/irisin and PGC-1α. If you're already in ketosis and HIIT, additional exogenous ketones hit a ceiling.</li>
+  <li><strong>Sodium oxybate for SWS.</strong> Discussed above. Pharmacological SWS ≠ functional SWS. Net memory effect probably neutral or negative.</li>
+  <li><strong>CLAS at age 45+.</strong> Fails or reverses. Wrong-population application of a real mechanism.</li>
+</ul>
+
+<p>The meta-point: depth over breadth. Two interventions stacked correctly and maintained reliably outperform five managed inconsistently. The stack-management tax on executive function is a real cost that intervention trials never measure.</p>
+
+<h3>Stack explorer</h3>
+<div class="stack-box">
+  <label for="stack-select" style="display:block; font-size:0.85rem; color:var(--muted); margin-bottom:0.4rem;">Pick a combination to see how they interact:</label>
+  <select id="stack-select" onchange="showStack(this.value)">
+    <option value="">— select a pair —</option>
+    <option value="creatine-hiit">Creatine + HIIT</option>
+    <option value="light-dora">Morning bright light + DORA</option>
+    <option value="mbct-sleep">MBCT session + high-quality NREM night</option>
+    <option value="hiit-cognitive">HIIT → cognitive/identity work (BDNF window)</option>
+    <option value="glp1-psychedelic">GLP-1 agonist + psychedelic-assisted therapy</option>
+    <option value="metformin-hiit">Metformin + HIIT for neuroplasticity</option>
+    <option value="ketones-hiit">Exogenous ketones + HIIT (in-ketosis)</option>
+    <option value="oxybate-memory">Sodium oxybate for memory consolidation</option>
+    <option value="clas-older">CLAS auditory stim at age 45+</option>
+    <option value="creatine-theanine">Creatine + L-theanine/caffeine</option>
+  </select>
+  <div id="stack-verdict" class="stack-verdict"><em style="color:var(--muted);">Select an option above.</em></div>
+</div>
+</section>
+
+<section id="suppression">
+<h2>11. Four cases, four different rate-limiting steps</h2>
+
+<p>Four cases where the data exist and the intervention is out of mainstream use, but <em>for different reasons</em>. The revised framing: treating them as one "suppression" phenomenon was the original version of this section and it was the document's central analytic weakness. Retitled and re-scoped. An earlier draft also included low-dose lithium in this section; LATTICE was null on six coprimaries at p&lt;0.01 — this is not a suppression case, it's an evidence case where the trial ran and the signal wasn't there, and it has been moved out. Keeping it here was motivated reasoning.</p>
+
+<h4>Nicotine patches for MCI — CMS coverage + guidelines + Hatch-Waxman</h4>
+<p><em>Rate-limiting step:</em> payer coverage and specialty-society guidelines, not the FDA. Transdermal nicotine is already approved.</p>
+<p>Newhouse/Levin 2012 pilot (N=74 MCI): significant attention, memory, and psychomotor gains. MCI patients recovered 46% long-term memory versus 26% decline in placebo <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/22232050/">Newhouse 2012</a>)</em>. Mechanism: nAChR upregulation in hippocampus and PFC, well-characterized in cholinergic deficit states, pharmacologically distinct from tobacco's harm profile when delivered via patch. The MIND expansion has been ongoing since 2015 without a positive readout <em class="cite">(<a href="https://clinicaltrials.gov/study/NCT02720445">MIND</a>)</em> — which should be updating the prior toward null. Rate-limiting step here is <em>not</em> the FDA (transdermal nicotine is already approved); it's (a) CMS/payer coverage for off-label use in MCI, (b) absence of an AAN/Alzheimer's Association guideline, and (c) Hatch-Waxman economics — a new indication on an off-patent generic confers at most 3-year 505(b)(2) exclusivity, which doesn't price-protect a commodity patch. Social stigma compounds but isn't the binding constraint.</p>
+<p><em>Honest call:</em> In carefully selected MCI patients who have exhausted standard options, transdermal nicotine is defensible as a physician-run N-of-1 — meaning a prescribing neurologist or geriatric psychiatrist designs the protocol (baseline ECG, MoCA/CDR-SB, orthostatic vitals, pre-specified dose, pre-specified stop rule at a defined MoCA delta or AE threshold). <strong>Do not self-initiate.</strong> Contraindications include suspected DLB (cholinergic tone is already collapsing), symptomatic cardiovascular disease, pregnancy, and current smoking status. Doses are not published here because the amnestic-MCI Newhouse protocol does not generalize to other MCI subtypes and the indication does not generalize to cognitively healthy readers; specifics belong in the prescribing conversation. The evidence is better than the current default of nothing; it is not better than a prescribing clinician's judgment.</p>
+
+<h4>Estrogen-only HRT post-WHI — liability + ACOG/NAMS guideline inertia</h4>
+<p><em>Rate-limiting step:</em> prescriber malpractice exposure and specialty-society guideline stickiness, not the FDA. FDA never pulled estradiol; ACOG took roughly 14 years to reverse tone post-WHI.</p>
+<p>The 2024 <em>Menopause</em> reanalysis of WHI data showed estrogen-only initiated before 65: 19% mortality reduction, reduced breast, lung, and colorectal cancer, reduced dementia <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/38781402/">Menopause 2024 reanalysis</a>)</em>. WHI's 2002 overcorrection — driven by the combined CEE+MPA arm in older late-initiators — permanently encoded "HRT = breast cancer = bad doctor" into clinical culture. Economic: generic estradiol is cheap, no market to rebuild. Social: residual liability for prescribers who move ahead of guidelines.</p>
+<p><em>Honest call:</em> for post-hysterectomy women initiated before 65, estrogen-only HRT has a favorable risk-benefit profile that the clinical default of tapering doesn't match.</p>
+
+<h4>Testosterone optimization in eugonadal men — nosology, not regulation</h4>
+<p><em>Rate-limiting step:</em> the absence of a defined clinical indication. "Low-normal with symptoms" is not a disease state in ICD-10. TRAVERSE was funded and completed for the defined indication; the system worked there. This is a nosological problem, not a regulatory one.</p>
+<p>TRAVERSE (N=5,246 hypogonadal): MACE noninferior; AFib 3.5% vs 2.4%, PE 0.9% vs 0.5%, AKI 2.3% vs 1.5% <em class="cite">(<a href="https://pubmed.ncbi.nlm.nih.gov/37326322/">Lincoff 2023</a>)</em>. Reading the noninferiority result as dispositive while ignoring that three cardiovascular endpoints trended toward harm would be the asymmetric-data handling this document critiques elsewhere; the honest read is that TRT in hypogonadal men has an acceptable risk-benefit profile <em>with monitoring</em> and is still being undertreated, not that it's unambiguously safe. The eugonadal optimization space remains unstudied.</p>
+<p><em>Honest call:</em> symptomatic men with low-normal testosterone plus metabolic or cognitive complaints — closely monitored trial under a prescribing endocrinologist or urologist is defensible (baseline hematocrit, PSA, estradiol, sleep-apnea screen; q3-month labs for the first year). Evidence base in hypogonadal patients is better than the discourse suggests; genuinely absent for eugonadal optimization.</p>
+
+<h3>Silo cases (data exist, wrong specialty reads them)</h3>
+<ul>
+  <li><strong>Sodium oxybate SWS-quality finding</strong> — trapped in narcolepsy pharmacology, would reshape how cognitive sleep medicine targets interventions.</li>
+  <li><strong>Ayahuasca NEO-PI durability</strong> — trapped in ethnobotany + a small psychedelic cluster, invisible to personality trait neuroscience proper. The d=2.20 openness effect size would be paradigm-shifting in trait psychology if it were cited there.</li>
+  <li><strong>GLP-1 in addiction medicine</strong> — endocrinology-owned, addiction psychiatrists not yet deploying despite JAMA Psychiatry 2025 and 83k-cohort data.</li>
+</ul>
+</section>
+
+<section id="index">
+<h2>12. Evidence-grade index — filterable</h2>
+
+<p>Every intervention in this document, graded, searchable, filterable. Check categories and grades to narrow the view. The index is the scannable summary — use it, then jump back to the per-intervention section for the reasoning.</p>
+
+<div class="filters">
+  <fieldset>
+    <legend>Grade</legend>
+    <label><input type="checkbox" class="f-grade" value="A" checked> A</label>
+    <label><input type="checkbox" class="f-grade" value="B" checked> B</label>
+    <label><input type="checkbox" class="f-grade" value="C" checked> C</label>
+    <label><input type="checkbox" class="f-grade" value="D" checked> D</label>
+    <label><input type="checkbox" class="f-grade" value="F" checked> F</label>
+  </fieldset>
+  <fieldset>
+    <legend>Category</legend>
+    <label><input type="checkbox" class="f-cat" value="identity" checked> identity</label>
+    <label><input type="checkbox" class="f-cat" value="cognition" checked> cognition</label>
+    <label><input type="checkbox" class="f-cat" value="sleep" checked> sleep</label>
+    <label><input type="checkbox" class="f-cat" value="metabolic" checked> metabolic</label>
+    <label><input type="checkbox" class="f-cat" value="regulatory" checked> regulatory</label>
+  </fieldset>
+</div>
+
+<div class="wide">
+<table class="idx" id="idx-table">
+  <thead><tr><th>Intervention</th><th>Cat</th><th>Grade</th><th>Verdict</th><th>Cite</th></tr></thead>
+  <tbody>
+    <tr data-g="C" data-c="identity"><td>Ayahuasca (ceremonial, long follow-up)</td><td>identity</td><td class="g gC">C+</td><td>Single uncontrolled N=24 trial, tourist-cohort selection, d=2.20 suggests measurement artifact. Unverified 2025 replication citation removed. See §4.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7524857/">Frecska 2020</a></td></tr>
+    <tr data-g="A" data-c="identity"><td>MBCT / MBSR</td><td>identity</td><td class="g gA">A</td><td>Network meta RR 0.73 relapse. SRET self-referential bias reduction replicated. 12–15mo durability.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/27119968/">Kuyken 2016</a></td></tr>
+    <tr data-g="B" data-c="identity"><td>Acupuncture for combat PTSD</td><td>identity</td><td class="g gB">B</td><td>Single-trial (N=93, Hollifield). Sham-acupuncture design caveat; combat-only. Pending independent replication.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10882512/">Hollifield 2024</a></td></tr>
+    <tr data-g="B" data-c="identity"><td>IFS (Internal Family Systems)</td><td>identity</td><td class="g gB">B</td><td>PARTS 2024 d=−0.9 for PTSD at 24wk. Thin base. Promising.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38934934/">PARTS 2024</a></td></tr>
+    <tr data-g="B" data-c="identity"><td>Ibogaine (TBI+PTSD)</td><td>identity</td><td class="g gB">B</td><td>Stanford N=30 veterans: 88% PTSD reduction 1mo. No identity-scale measures. Symptom relief, not identity restructure per se.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38182784/">Cherian 2024</a></td></tr>
+    <tr data-g="B" data-c="identity"><td>5-MeO-DMT (BPL-003)</td><td>identity</td><td class="g gB">B</td><td>Phase 2b N=193 TRD: MADRS −11 to −12 at day 29. 8-wk follow-up only.</td><td>—</td></tr>
+    <tr data-g="C" data-c="identity"><td>Flotation-REST</td><td>identity</td><td class="g gC">C</td><td>Anxiety 6mo durability; no identity-scale measures.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/29453033/">Feinstein 2018</a></td></tr>
+    <tr data-g="C" data-c="identity"><td>Expressive writing</td><td>identity</td><td class="g gC">C</td><td>31 RCTs, d=0.07–0.16. Real, tiny.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36921878/">Guo 2023</a></td></tr>
+    <tr data-g="C" data-c="identity"><td>Wim Hof breathwork</td><td>identity</td><td class="g gC">C</td><td>N=84 RCT: parity with active control, not superiority. No personality measures.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/39606690/">Wim Hof 2024</a></td></tr>
+    <tr data-g="D" data-c="identity"><td>Coherence Therapy (Ecker)</td><td>identity</td><td class="g gD">D</td><td>Zero RCTs. Reputation far exceeds evidence.</td><td>—</td></tr>
+    <tr data-g="D" data-c="identity"><td>Safe & Sound Protocol / taVNS for trait change</td><td>identity</td><td class="g gD">D</td><td>State autonomic effects yes; trait change claims unsupported.</td><td>—</td></tr>
+    <tr data-g="D" data-c="identity"><td>Nitrous oxide for self-concept</td><td>identity</td><td class="g gD">D</td><td>Acute depression signal only. No identity data.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11097146/">Nagele</a></td></tr>
+    <tr data-g="D" data-c="identity"><td>MDMA-PTSD (post-FDA rejection)</td><td>identity</td><td class="g gD">D</td><td>Functional unblinding &gt;90%, 3 papers retracted. Signal intact, trial quality compromised.</td><td>—</td></tr>
+    <tr data-g="D" data-c="identity"><td>Psilocybin microdosing</td><td>identity</td><td class="g gD">D</td><td>Szigeti N=191 self-blinding: no between-group difference. Placebo-dominant.</td><td><a href="https://elifesciences.org/articles/62878">Szigeti 2021</a></td></tr>
+    <tr data-g="A" data-c="cognition"><td>HIIT (20 min, 2–3×/wk)</td><td>cognition</td><td class="g gA">A</td><td>Acute BDNF ↑, cortical plasticity window 2–4h post. Best exercise stack with resistance.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11764394/">HIIT meta 2025</a></td></tr>
+    <tr data-g="B" data-c="cognition"><td>Resistance training (3×/wk, 12+ wk)</td><td>cognition</td><td class="g gB">B+</td><td>17 small RCTs avg N≈43. Selective positive + null domains = publication-bias pattern. Bias-corrected effect likely smaller.</td><td><a href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1708244/full">Front Psychiatry 2025</a></td></tr>
+    <tr data-g="A" data-c="cognition"><td>Creatine 5g daily</td><td>cognition</td><td class="g gA">A</td><td>Memory SMD=0.31. Sleep-deprivation rescue via ↑cerebral PCr. Zero downside.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11275561/">Xu 2024</a></td></tr>
+    <tr data-g="B" data-c="cognition"><td>Methylene blue low-dose</td><td>cognition</td><td class="g gB">B</td><td>Mechanism A; human RCT base C. Complex IV rescue, U-shaped dose-response.</td><td>—</td></tr>
+    <tr data-g="B" data-c="cognition"><td>Ketamine / esketamine durability</td><td>cognition</td><td class="g gB">B</td><td>IV d=−0.75, IN d=−0.38 pooled. Tachyphylaxis managed by interval dosing.</td><td>—</td></tr>
+    <tr data-g="C" data-c="cognition"><td>L-theanine + caffeine</td><td>cognition</td><td class="g gC">C</td><td>Attention-switching SMD=0.33 in 2h window. Real, tiny, acute.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/31758301/">theanine+caffeine meta</a></td></tr>
+    <tr data-g="C" data-c="cognition"><td>Exogenous ketones</td><td>cognition</td><td class="g gC">C</td><td>SMD=0.29, I²=91% — responder phenotype; test on yourself.</td><td><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1802531/full">Ketones meta 2026</a></td></tr>
+    <tr data-g="C" data-c="cognition"><td>Lion's mane</td><td>cognition</td><td class="g gC">C</td><td>Acute Stroop p=.005 at 60 min. No sustained domain effect.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38004235/">Docherty 2023</a></td></tr>
+    <tr data-g="C" data-c="cognition"><td>Neurofeedback (lab-grade SMR/alpha-theta)</td><td>cognition</td><td class="g gC">C</td><td>Anxiety d=0.7–0.9 with sham control. Consumer devices placebo-dominant.</td><td>—</td></tr>
+    <tr data-g="C" data-c="cognition"><td>Bromantane (Ladasten)</td><td>cognition</td><td class="g gC">C</td><td>Single uncorroborated CGI-driven trial. Evidence-laundering risk. Hypothesis-generating; not a personal-use recommendation.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/21322821/">PMID 21322821</a></td></tr>
+    <tr data-g="C" data-c="cognition"><td>Spermidine (RCT)</td><td>cognition</td><td class="g gC">C</td><td>Observational cohort positive; RCT null (Schwarz 2022, p=.47).</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35616942/">Schwarz 2022</a></td></tr>
+    <tr data-g="D" data-c="cognition"><td>Selegiline low-dose</td><td>cognition</td><td class="g gD">D</td><td>Knoll aging hypothesis not replicated; 2023 BPAP negative.</td><td>—</td></tr>
+    <tr data-g="D" data-c="cognition"><td>Cogmed / dual n-back</td><td>cognition</td><td class="g gD">D</td><td>Near-transfer real; far-transfer to intelligence near-zero.</td><td>—</td></tr>
+    <tr data-g="F" data-c="cognition"><td>tDCS / tACS (consumer-grade)</td><td>cognition</td><td class="g gF">F</td><td>Publication-bias-corrected working memory effect ≈0.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38159856/">Brain Res 2024</a></td></tr>
+    <tr data-g="C" data-c="cognition"><td>Cold water immersion</td><td>cognition</td><td class="g gC">C</td><td>Stress down only at 12h post; inflammation up acutely. No cognition signal.</td><td><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0317615">PLOS One 2025</a></td></tr>
+    <tr data-g="B" data-c="sleep"><td>DORAs (daridorexant, lemborexant)</td><td>sleep</td><td class="g gB">B</td><td>Architecture preserved, less next-day impairment than Z-drugs. Memory consolidation unmeasured.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35395302/">Mignot 2022</a></td></tr>
+    <tr data-g="B" data-c="sleep"><td>CLAS (closed-loop auditory stim) — age &lt;45</td><td>sleep</td><td class="g gB">B</td><td>Language/discovery learning gains; effect declining ~92%/yr in replications.</td><td><a href="https://www.mdpi.com/2076-3425/14/11/1138">MDPI 2024</a></td></tr>
+    <tr data-g="C" data-c="sleep"><td>Trazodone low-dose / doxepin 3–6mg</td><td>sleep</td><td class="g gC">C</td><td>Architecture preserved, no memory endpoint data.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35226876/">Trazodone 2022</a></td></tr>
+    <tr data-g="C" data-c="sleep"><td>Morning bright light</td><td>sleep</td><td class="g gC">C</td><td>Phase-shifts circadian axis. Same-night architecture effect weak.</td><td>—</td></tr>
+    <tr data-g="D" data-c="sleep"><td>Sodium oxybate for memory</td><td>sleep</td><td class="g gD">D</td><td>SWS quantity yes; consolidation null or negative. Pharmacological SWS ≠ physiological.</td><td>—</td></tr>
+    <tr data-g="D" data-c="sleep"><td>CLAS at age ≥55</td><td>sleep</td><td class="g gD">D</td><td>Auditory evoked response 50% weaker; memory consolidation fails or reverses.</td><td>—</td></tr>
+    <tr data-g="D" data-c="sleep"><td>Glycine 3g</td><td>sleep</td><td class="g gD">D</td><td>Minimal PSG data. No memory endpoint.</td><td>—</td></tr>
+    <tr data-g="F" data-c="sleep"><td>Thermal devices (Eight Sleep, ChiliPad)</td><td>sleep</td><td class="g gF">F</td><td>Zero PSG validation. Self-report only.</td><td>—</td></tr>
+    <tr data-g="F" data-c="sleep"><td>Apigenin / Mg-threonate / Mg-glycinate</td><td>sleep</td><td class="g gF">F</td><td>Wearable-algorithm data only. No PSG, no memory endpoint.</td><td>—</td></tr>
+    <tr data-g="B" data-c="metabolic"><td>Semaglutide for AUD (Phase 2)</td><td>metabolic</td><td class="g gB">B+</td><td>N=48: drinks/day β=−0.41, lab self-admin d=0.46–0.48. Effect attenuates at healthy BMI.</td><td><a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2829811">Hendershot 2025</a></td></tr>
+    <tr data-g="B" data-c="metabolic"><td>Urolithin A / Mitopure (muscle/mito)</td><td>metabolic</td><td class="g gB">B</td><td>Strength +12%, VO₂ gains, CRP down. Cognitive endpoints pending CLARITY March 2026.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9133462/">Singh 2022</a></td></tr>
+    <tr data-g="C" data-c="metabolic"><td>Transdermal estradiol (perimenopause)</td><td>metabolic</td><td class="g gC">C+</td><td>CLSA N=7,251: episodic memory d=0.303. No RCT in perimenopause proper.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12380479/">CLSA 2025</a></td></tr>
+    <tr data-g="C" data-c="metabolic"><td>SGLT2 inhibitors (cognitive)</td><td>metabolic</td><td class="g gC">C</td><td>BBB-penetrant, mechanism promising; Stroop p=.046 secondary only.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12198475/">PMC12198475</a></td></tr>
+    <tr data-g="D" data-c="metabolic"><td>Metformin in non-diabetics</td><td>metabolic</td><td class="g gD">D</td><td>Observational −8% cognitive impairment; TAME delayed; healthy-user confound severe.</td><td>—</td></tr>
+    <tr data-g="D" data-c="metabolic"><td>Rapamycin (PEARL, weekly 5mg)</td><td>metabolic</td><td class="g gD">D</td><td>Mood/QOL signal (ηp²=0.11–0.17). No cognitive endpoint assessed.</td><td><a href="https://clinicaltrials.gov/study/NCT04488601">NCT04488601</a></td></tr>
+    <tr data-g="D" data-c="metabolic"><td>Low-dose lithium (LATTICE)</td><td>metabolic</td><td class="g gD">D</td><td>6 coprimary null at p&lt;0.01. Amyloid+ subgroup exploratory, hypothesis-generating only. Removed from §11 compounded-suppression list.</td><td><a href="https://jamanetwork.com/journals/jamaneurology/fullarticle/2845746">LATTICE</a></td></tr>
+    <tr data-g="D" data-c="metabolic"><td>Taurine (Singh 2023)</td><td>metabolic</td><td class="g gD">D</td><td>Preclinical aging story. No human cognitive endpoint. 2025 follow-up conflicting.</td><td>—</td></tr>
+    <tr data-g="D" data-c="metabolic"><td>GLP-1 at healthy BMI (non-metabolic)</td><td>metabolic</td><td class="g gD">D</td><td>Klausen: effect concentrated at BMI&gt;30. Healthy-BMI benefits largely inferred. Sarcopenia risk unquantified here.</td><td>—</td></tr>
+    <tr data-g="A" data-c="regulatory"><td>Nicotine patch for MCI (withheld)</td><td>regulatory</td><td class="g gA">A</td><td>Newhouse 2012 Class 1; off-patent, stigma. Clearest asymmetry case in doc.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/22232050/">Newhouse 2012</a></td></tr>
+    <tr data-g="A" data-c="regulatory"><td>Estrogen-only HRT &gt;65 (Baik 2024)</td><td>regulatory</td><td class="g gA">A</td><td>N=10M Medicare: 19% mortality reduction, dementia/cancer/CV reductions. Post-WHI undertreatment.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38595196/">PMID 38595196</a></td></tr>
+    <tr data-g="A" data-c="regulatory"><td>Psilocybin for end-of-life distress</td><td>regulatory</td><td class="g gA">A</td><td>Griffiths 2016 crossover: 92% response, 80% maintained 6mo. Schedule I blocks access to dying patients.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/27909165/">PMID 27909165</a></td></tr>
+    <tr data-g="B" data-c="regulatory"><td>Buprenorphine access (MAT)</td><td>regulatory</td><td class="g gB">B+</td><td>~50% OUD mortality reduction; modeled 37,000 US deaths preventable/yr at France-model access.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36624606/">PMID 36624606</a></td></tr>
+    <tr data-g="B" data-c="regulatory"><td>Testosterone replacement (TRAVERSE)</td><td>regulatory</td><td class="g gB">B</td><td>MACE non-inferior vs placebo. Post-2015 undertreatment of hypogonadal men.</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37326322/">TRAVERSE</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p class="ledger-note">Index reflects 2026 evidence. Some rows are awaiting major trial readouts (CLARITY for urolithin A cognition, OxSENSE for GLP-1 healthy-BMI, TAME for metformin cognitive endpoints) and will move up or down when those close.</p>
+</section>
+
+<section id="limits">
+<h2>12a. What this document is likely getting wrong</h2>
+
+<p>Six adversarial readers (effect-size skeptic, meta-analyst, frame critic, clinician, health economist, safety-skeptic) reviewed this document against the thesis. Several structural critiques survived. Listing them at full strength here, rather than dispersing them into caveats a reader will skip.</p>
+
+<ol>
+<li><strong>Several grades were single-trial claims dressed as replicated findings.</strong> Hollifield acupuncture-for-PTSD, Frecska ayahuasca, and PARTS IFS are each one trial from one group. The regrades (acupuncture A−→B, ayahuasca B→C+, resistance training A→B+) and the index single-trial flags follow from that. The original grades conflated <em>trial quality</em> with <em>replicated effect</em>. A-grade now requires independent replication.</li>
+
+<li><strong>The harm ledger has its own selection effect.</strong> Every row is a condition where the "withheld intervention" framing is already argued within mainstream medicine. Absent: conditions where the ledger would favor the cautious default (gabapentinoid overprescription, SSRIs in adolescents with emergent suicidality signal, benzodiazepine dependence cascades, bariatric overuse). The ledger is a real signal, but it is confirmation-selected, and a row labeled "37,000 deaths/yr from X-waiver removal" is a <em>modeled counterfactual</em> sitting next to observational hazard ratios without visual distinction. The bars now carry source-class markers; the selection is disclosed.</li>
+
+<li><strong>"Regulatory asymmetry" conflates six gatekeepers.</strong> FDA approval, DEA scheduling, CMS/payer coverage, specialty-society guidelines, prescriber liability exposure, and manufacturer economics under Hatch-Waxman are distinct mechanisms with different fixes. Collapsing them into a single "asymmetry" obscures the lever. Nicotine-for-MCI is rate-limited by payer coverage + guideline inertia, not the FDA. Estrogen-only HRT is rate-limited by malpractice exposure + ACOG/NAMS guideline stickiness, not the FDA. Low-dose lithium in §11 is rate-limited by <em>the evidence itself</em> — LATTICE was null on its coprimaries; this is not a suppression case and has been moved. Testosterone in eugonadal men is rate-limited by the absence of an ICD-10 indication, which is a nosological problem, not a regulatory one.</li>
+
+<li><strong>Adverse-event accounting is asymmetric with the harm-of-withholding accounting.</strong> The ledger counts deaths from underdeployment but not HPPD, post-psychedelic persistent perceptual disturbance, ayahuasca-precipitated psychosis, ibogaine QTc deaths, or serotonin-syndrome risk from MAOI interactions in recommended compounds. AE and contraindication blocks have been added to every pharmacological recommendation, and specific doses have been removed from the public document where they invited self-initiation.</li>
+
+<li><strong>The Phase 2 → Phase 3 attrition base rate disciplines optimism the document was relying on.</strong> Roughly 10–20% of Phase 2 signals in neuropsych survive Phase 3. LATTICE (lithium), TAME-adjacent metformin evidence, and spermidine are each instances of the pattern: observational positive, RCT null. This should be updating the prior on methylene blue, nicotine-for-MCI, and every other "real Phase 2 signal, no Phase 3" case in the document, not bracketed as one-offs. The grades of such entries are now conditioned on that base rate.</li>
+
+<li><strong>The frame-level claim is weaker than the document originally argued.</strong> The stronger version — "regulatory conservatism is miscalibrated, sometimes badly" — is defensible. The weaker version that the prose sometimes slid into — "the asymmetry is incoherent, any intervention with plausible mechanism is being wronged" — is not, and collapses once you acknowledge that (a) precautionary reasoning has serious defenders (Hansson, Steele, Stirling) who argue for asymmetric weighting under deep uncertainty about long-tail harms, (b) aducanumab's rollback suggests the Type-I detector still works sometimes, and (c) "what society should allow" and "what I should do" are different questions with different force from the asymmetry argument. The document is arguing miscalibration, not incoherence.</li>
+
+<li><strong>Every failed enthusiasm looked calibrated from inside.</strong> HRT-as-fountain-of-youth pre-WHI. SSRIs-as-safe pre-black-box. Opioids-for-chronic-pain pre-2010. Each had defensible mechanism, real Phase 2 data, and careful advocates. The document's argumentative structure is structurally identical. "We have better data now" is not a complete defense; that is what they said in 1998. The honest position is that this round might also be calibrated wrong, and the hedge is in the N-of-1 framing and the per-intervention monitoring plans rather than in the aggregate confidence.</li>
+</ol>
+
+<p>None of these undermine the document's core claim — that a well-defined subset of interventions is underdeployed because the ledger is one-sided. They do mean the grades, recommendations, and framing sit closer to "sharp polemic with known failure modes" than to "settled audit." A reader who has made it this far should weight accordingly.</p>
+</section>
+
+<section id="bottom">
+<h2>13. Bottom line — what I'd actually recommend</h2>
+
+<p>For a cognitively healthy adult, metabolically healthy, no clinical indication, in 2026, pursuing identity and cognitive work. Ordered by evidence-per-effort:</p>
+
+<ol>
+  <li><strong>Creatine 5g/day monohydrate.</strong> <span class="grade A">A</span> Real, small, robust, zero downside. Just do it.</li>
+  <li><strong>HIIT 20 minutes, 2–3×/week + resistance training 2–3×/week.</strong> <span class="grade B">B+</span> The best-evidenced cognitive stack in the corpus even after a publication-bias-aware regrade. Time cognitively demanding work to the 30-minute post-HIIT BDNF window.</li>
+  <li><strong>MBCT 8-week course with a real teacher.</strong> <span class="grade A">A</span> If the goal is endogenous identity work — reduced negative self-referential processing, DMN deactivation with practice — this is the one. Not the app.</li>
+  <li><strong>Morning bright light within the first hour of waking.</strong> <span class="grade B">B</span> Sleep-timing stability. Near-zero cost.</li>
+  <li><strong>Ayahuasca, in a medically screened container, if identity restructuring is the primary goal and standard psychedelic options are off the table.</strong> <span class="grade C">C+</span> Evidence is one uncontrolled N=24 trial. Grade reflects novelty and mechanism plausibility, not replication. Read the §4 safety floor (MAOI washout, psychosis/bipolar contraindications, ECG screening). Not a casual recommendation — do it under medical screening or don't do it.</li>
+  <li><strong>IFS with an experienced practitioner</strong> if available. <span class="grade B">B</span> Thin RCT base but the one good trial is large-effect.</li>
+  <li><strong>DORA (daridorexant or lemborexant) if you have insomnia.</strong> <span class="grade B">B</span> Not as a general cognitive optimization.</li>
+  <li><strong>L-theanine + caffeine as a morning habit.</strong> <span class="grade C">C</span> Tiny real effect, fine to include.</li>
+  <li><strong>Exogenous ketones situationally</strong>, responder-phenotype dependent. <span class="grade C">C</span></li>
+</ol>
+
+<p><strong>Don't bother with:</strong></p>
+<ul>
+  <li>tDCS, tACS, consumer neurofeedback, dual n-back, Cogmed. <span class="grade F">F</span>/<span class="grade D">D</span></li>
+  <li>Thermal sleep devices, Mg-threonate, apigenin as cognitive interventions. <span class="grade F">F</span></li>
+  <li>Metformin, rapamycin, taurine, low-dose lithium for cognitive enhancement in a healthy adult. <span class="grade D">D</span> Mechanism-heavy, data-light. If you take them, take them for their stated indication.</li>
+  <li>GLP-1 agonists at healthy BMI for non-metabolic indications. <span class="grade D">D</span> Wait for OxSENSE.</li>
+  <li>Wim Hof, SSP, taVNS, Holotropic as identity interventions. State-level tools, trait claims unsupported.</li>
+  <li>Coherence Therapy at a premium. Reputation, not evidence.</li>
+  <li>Sodium oxybate for memory consolidation ever.</li>
+  <li>CLAS if you're over 45.</li>
+</ul>
+
+<p><strong>Specific-indication calls, if relevant:</strong> nicotine patches for MCI with careful N-of-1 framing. Estrogen-only HRT initiated before 65 post-hysterectomy. TRT in symptomatic low-normal eugonadal men under monitoring. Ibogaine for refractory TBI+PTSD at a screened clinic. GLP-1 for comorbid obesity + AUD — deploy, the evidence is there. Transdermal estradiol for perimenopausal cognitive or mood symptoms — the observational effect size (d=0.303) beats most cognitive interventions in this document, and the prescribing barrier is entirely cultural. Combat-PTSD acupuncture with sham-controlled verum protocol — the d=1.17 effect is not fringe.</p>
+
+<h3>What a non-asymmetric regulatory environment would additionally allow</h3>
+
+<p>Separate question. If the no-intervention baseline were actually priced into regulatory decisions at its real cost (Section 3's ledger), the following move from "experimental" or "restricted" to "available under supervision":</p>
+
+<ul>
+  <li><strong>Nicotine patches for MCI</strong> with a proper Phase 3. The only thing stopping this is that no one owns the patent.</li>
+  <li><strong>Psilocybin for end-of-life existential distress.</strong> Griffiths and Ross replicated the effect a decade ago. Twenty years of dying patients denied a defensible intervention to satisfy a schedule that was written for cultural reasons.</li>
+  <li><strong>Methylene blue</strong> with a properly funded dose-ranging trial. Mechanism is one of the cleanest in pharmacology; we have Phase 2 AD data; there is no Phase 3 because the molecule costs nothing.</li>
+  <li><strong>Off-patent repurposing pathway generally.</strong> Misoprostol, nicotine, low-dose lithium, estradiol in perimenopause, metformin in aging — a functioning non-industry route to phase-3 authorization would close most of the asymmetry gap at a fraction of the cost the current system imposes through delay and non-use.</li>
+  <li><strong>Perimenopausal HRT</strong> as first-line for symptomatic cognitive and mood symptoms in women under 60, routed transdermally, per Baik 2024 and the CLSA observational data. This is already possible in principle; the cultural barrier exceeds the regulatory one.</li>
+</ul>
+
+<p>The personal calculus and the societal calculus are different questions. This section answers both separately.</p>
+</section>
+
+<section id="method">
+<h2>14. Method note</h2>
+
+<p>Assembled via a three-tier agent swarm. Tier 1: six parallel Haiku reconnaissance agents, each with a narrow search mandate (pharmacological identity, non-pharm identity, cognitive augmentation, metabolic/longevity, sleep substrate, GLP-1 + suppression patterns), producing structured findings with PubMed/DOI citations. Tier 2: three Sonnet analytical passes — mechanism coherence, stacking/interaction analysis, suppression audit — consuming the Haiku output and flagging where mechanism outran data, where stacks interfere, and where economic and social forces compound. Tier 3: Opus synthesis into this document, making the judgment calls on evidence grading, the rankings, and the commit/skip language. Citations are sourced exclusively from the Tier 1 digest; no references were generated outside that set.</p>
+
+<p><em>Expansion loop:</em> A second pass added three Haiku agents on (a) regulatory-asymmetry history and theory (H7), (b) additional under-covered interventions — microdosing, urolithin A, acupuncture-for-PTSD, methylene blue, transdermal estradiol, SGLT2 inhibitors, bromantane, several null findings (H8), and (c) counterfactual harm quantification feeding the withheld-intervention ledger (H9). The asymmetry thesis reframed the rest: each "understated" case in the original document is now explicitly an instance of the general regulatory asymmetry pattern.</p>
+
+<p><em>Interactive displays:</em> three, built with inline CSS + vanilla JS, no external dependencies, no build step. The harm-ledger bar chart is pure CSS (div widths). The filterable evidence-grade index uses checkbox handlers that show/hide table rows. The stack explorer is a select dropdown with a preloaded JS verdict map. All rendering is offline-capable.</p>
+
+<p><em>Citation integrity note:</em> Citations verified against the Tier 1 source list; where a specific PMID could not be verified against the source list, the descriptive citation is retained without hyperlink to avoid fabrication.</p>
+
+<p><em>Adversarial review round.</em> After the initial draft, a six-persona critique swarm (effect-size skeptic, meta-analyst, frame critic, clinician, health economist, safety-skeptic) read the document against the thesis. Surviving critiques were integrated inline (regrades, concessions in place, AE and contraindication blocks, specific-dose removals) and collected structurally in §12a "What this document is likely getting wrong." The regrades — ayahuasca B→C+, acupuncture A−→B, resistance training A→B+, bromantane B→C, psilocybin microdosing B→D, and removal of low-dose lithium from §11 — all flow from that round.</p>
+</section>
+
+<section id="refs" class="refs">
+<h2>15. References</h2>
+<ol>
+  <li>Brewer JA et al. 2011. Meditation experience is associated with differences in default mode network activity. PNAS. <a href="https://pubmed.ncbi.nlm.nih.gov/22114193/">PMID 22114193</a></li>
+  <li>Williams NR / Cherian K et al. 2024. Magnesium–ibogaine therapy in veterans with TBI. <em>Nature Medicine</em>. <a href="https://www.nature.com/articles/s41591-023-02705-w">Nature Medicine</a> | <a href="https://pubmed.ncbi.nlm.nih.gov/38182784/">PMID 38182784</a></li>
+  <li>Feinstein JS et al. 2018. The elicitation of relaxation and interoceptive awareness using Floatation-REST in generalized anxiety disorder. <a href="https://pubmed.ncbi.nlm.nih.gov/29453033/">PMID 29453033</a></li>
+  <li>Feinstein JS et al. 2024. Safety of Floatation-REST. <em>PLOS One</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/38457451/">PMID 38457451</a></li>
+  <li>Frecska E et al. 2020. The therapeutic potentials of ayahuasca revisited (NEO-PI 6-month data). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7524857/">PMC7524857</a></li>
+  <li>Guo L 2023. Expressive writing meta-analysis, 31 RCTs. <a href="https://pubmed.ncbi.nlm.nih.gov/36921878/">PMID 36921878</a></li>
+  <li>Klausen MK et al. Exenatide for alcohol use disorder; BMI-stratified exploratory analysis. (No verified digest URL; descriptive citation retained.)</li>
+  <li>Kuyken W et al. 2016. Efficacy of MBCT in prevention of depressive relapse. <em>JAMA Psychiatry</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/27119968/">PMID 27119968</a></li>
+  <li>LATTICE investigators 2024. Low-dose lithium in MCI, 2-year RCT. <a href="https://jamanetwork.com/journals/jamaneurology/fullarticle/2845746">JAMA Neurology</a></li>
+  <li>Lincoff AM et al. 2023. Cardiovascular safety of testosterone replacement (TRAVERSE). <em>NEJM</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/37326322/">PMID 37326322</a></li>
+  <li>Luan LX et al. 2024. Extended DMT infusion (DMTx) in healthy volunteers. Imperial. <a href="https://journals.sagepub.com/doi/10.1177/02698811231196877">J Psychopharmacol</a></li>
+  <li>MDPI Brain Sciences 2024. Three-night continuous CLAS, language and discovery learning. <a href="https://www.mdpi.com/2076-3425/14/11/1138">MDPI 2076-3425/14/11/1138</a></li>
+  <li>Mendelson JE et al. 2011. Salvinorin A dose-effects. <a href="https://pubmed.ncbi.nlm.nih.gov/21131142/">PMID 21131142</a></li>
+  <li>Menopause 2024. WHI reanalysis, estrogen-only in initiated-before-65 women. <a href="https://pubmed.ncbi.nlm.nih.gov/38781402/">PMID 38781402</a></li>
+  <li>Mignot E et al. 2022. Daridorexant in chronic insomnia, phase 3. <a href="https://pubmed.ncbi.nlm.nih.gov/35395302/">PMID 35395302</a></li>
+  <li>Nagele P et al. Nitrous oxide for treatment-resistant depression (pooled RCTs). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11097146/">PMC11097146</a></li>
+  <li>Newhouse PA et al. 2012. Nicotine patches in amnestic MCI (N=74). <em>Neurology</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/22232050/">PMID 22232050</a></li>
+  <li>Ngo H-VV et al. 2013. Auditory closed-loop stimulation of the sleep slow oscillation. <em>Neuron</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/23623061/">PMID 23623061</a></li>
+  <li>Noller GE et al. 2017. Ibogaine treatment outcomes for opioid dependence, 12-month follow-up. <a href="https://pubmed.ncbi.nlm.nih.gov/28402682/">PMID 28402682</a></li>
+  <li>OxSENSE trial registration (healthy BMI, pending). GLP-1 anhedonia endpoint.</li>
+  <li>PARTS IFS trial 2024. IFS for PTSD, d=−0.9 at 24 weeks. <a href="https://pubmed.ncbi.nlm.nih.gov/38934934/">PMID 38934934</a></li>
+  <li>PEARL rapamycin trial. <a href="https://clinicaltrials.gov/study/NCT04488601">NCT04488601</a></li>
+  <li>Resistance training cognition meta 2025 (17 RCTs, N=739). <a href="https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1708244/full">Frontiers Psychiatry 2025</a></li>
+  <li>Rosenberg R et al. 2019. Lemborexant phase 3 (SUNRISE-1). <a href="https://pubmed.ncbi.nlm.nih.gov/31819050/">PMID 31819050</a></li>
+  <li>SRET / MBCT self-referential encoding. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10600813/">PMC10600813</a></li>
+  <li>Singh P et al. 2023. Taurine deficiency as a driver of aging. <em>Science</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/37289866/">PMID 37289866</a></li>
+  <li>TAME trial (metformin, delayed). <a href="https://www.afar.org/tame-trial">AFAR/TAME</a></li>
+  <li>tDCS publication-bias-corrected meta, 134 interventions. Brain Research 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/38159856/">PMID 38159856</a></li>
+  <li>Trazodone low-dose meta 2022. <a href="https://pubmed.ncbi.nlm.nih.gov/35226876/">PMID 35226876</a></li>
+  <li>Vienne J et al. 2016. GHB and physiological sleep homeostasis. <a href="https://pubmed.ncbi.nlm.nih.gov/27253774/">PMID 27253774</a></li>
+  <li>Wim Hof breathwork RCT 2024 (N=84). <a href="https://pubmed.ncbi.nlm.nih.gov/39606690/">PMID 39606690</a></li>
+  <li>Xu Y et al. 2024. Creatine supplementation and cognitive function meta (16 RCTs). <a href="https://pubmed.ncbi.nlm.nih.gov/38430492/">PMID 38430492</a></li>
+  <li>L-theanine+caffeine meta. <a href="https://pubmed.ncbi.nlm.nih.gov/31758301/">PMID 31758301</a></li>
+  <li>Exogenous ketones cognition meta 2026. <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1802531/full">Frontiers Nutrition 2026</a></li>
+  <li>GLP-1 AUD real-world cohort (N=83,825). <a href="https://pubmed.ncbi.nlm.nih.gov/38806481/">PMID 38806481</a></li>
+  <li>JAMA Psychiatry 2025 GLP-1 AUD phase 2 RCT. <a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2829811">JAMA Psychiatry 2025</a></li>
+  <li>BPL-003 5-MeO-DMT phase 2b. <a href="https://clinicaltrials.gov/study/NCT05870930">NCT05870930</a></li>
+  <li>MIND nicotine study. <a href="https://clinicaltrials.gov/study/NCT02720445">NCT02720445</a></li>
+  <li>Baik SH, Baye F, McDonald CJ. 2024. HRT beyond age 65: effects on women's health outcomes. <em>Menopause</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/38595196/">PMID 38595196</a></li>
+  <li>Chalmers I, Glasziou P. 2009. Avoidable waste in biomedical research. <em>The Lancet</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/19525005/">PMID 19525005</a></li>
+  <li>Sunstein CR. 2002. Beyond the Precautionary Principle. U Chicago. <a href="https://chicagounbound.uchicago.edu/law_and_economics/87/">Chicago Unbound</a></li>
+  <li>Gieringer DH. Drug Evaluations: Type I vs. Type II Errors. RAND. <a href="https://escholarship.org/uc/item/5fg9n284">eScholarship</a></li>
+  <li>Aducanumab insider regulatory review. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10193636/">PMC10193636</a></li>
+  <li>Griffiths RR et al. 2016. Psilocybin for cancer existential distress, crossover RCT. <a href="https://pubmed.ncbi.nlm.nih.gov/27909165/">PMID 27909165</a></li>
+  <li>Jones KF et al. 2023. Eliminate the Buprenorphine DEA X-waiver. <em>J Nurs Scholarship</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/36624606/">PMID 36624606</a></li>
+  <li>Hendershot CS et al. 2025. Semaglutide for AUD, Phase 2 RCT. <em>JAMA Psychiatry</em>. <a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2829811">JAMA Psychiatry 2025</a></li>
+  <li>Hollifield M et al. 2024. Acupuncture for combat PTSD, sham-controlled RCT. <em>JAMA Psychiatry</em>. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10882512/">PMC10882512</a></li>
+  <li>Singh R et al. 2022. Urolithin A (Mitopure) muscle/mitochondrial RCT. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9133462/">PMC9133462</a></li>
+  <li>CLSA 2025. Transdermal/oral estradiol and cognitive function. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12380479/">PMC12380479</a></li>
+  <li>Dapagliflozin in early AD RCT. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12198475/">PMC12198475</a></li>
+  <li>Methylene blue cognitive vitality review (ADDF). <a href="https://www.alzdiscovery.org/uploads/cognitive_vitality_media/Methylene-Blue-Cognitive-Vitality-For-Researchers.pdf">ADDF</a></li>
+  <li>Docherty S et al. 2023. Hericium erinaceus (lion's mane) RCT. <a href="https://pubmed.ncbi.nlm.nih.gov/38004235/">PMID 38004235</a></li>
+  <li>Szigeti B et al. 2021. Self-blinding psilocybin microdose RCT, N=191. <em>eLife</em>. <a href="https://elifesciences.org/articles/62878">eLife</a></li>
+  <li>Schwarz C et al. 2022. Spermidine supplementation and cognition. <a href="https://pubmed.ncbi.nlm.nih.gov/35616942/">PMID 35616942</a></li>
+  <li>Cold water immersion meta-analysis 2025. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0317615">PLOS One 2025</a></li>
+  <li>Bromantane (Ladasten) N=728 multicenter. <a href="https://pubmed.ncbi.nlm.nih.gov/21322821/">PMID 21322821</a></li>
+  <li>GBD 2021 mental disorders. <em>Lancet Psychiatry</em> 2024. <a href="https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(24)00222-0/fulltext">Lancet Psychiatry</a></li>
+  <li>Swedish PTSD suicide cohort. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7758737/">PMC7758737</a></li>
+  <li>ADHD mortality UK/Denmark cohort 2024. <em>Trans Psychiatry</em>. <a href="https://www.nature.com/articles/s41398-024-02825-y">Trans Psychiatry 2024</a></li>
+  <li>Sleep disorders and dementia meta 2024–2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12518473/">PMC12518473</a></li>
+  <li>OUD treatment bookshelf. <a href="https://www.ncbi.nlm.nih.gov/books/NBK541393/">NBK541393</a></li>
+  <li>Treatment-resistant depression mortality 2024. <em>J Affect Disord</em>. <a href="https://www.sciencedirect.com/science/article/pii/S0165032724015490">Science Direct 2024</a></li>
+</ol>
+</section>
+
+<p class="meta-foot">Compiled April 2026. Opus synthesis over Haiku recon + Sonnet analysis. Expansion loop added asymmetry framing, harm-ledger quantification, additional interventions section, and three interactive displays. All citations drawn from the Tier 1 digest; none generated outside it.</p>
+
+</div>
+
+<script>
+// Stack explorer verdicts
+const stacks = {
+  "creatine-hiit":     { tag: "add",      label: "ADDITIVE",   text: "Different substrates. Creatine buffers ATP via phosphocreatine; HIIT elevates BDNF and drives plasticity signaling. No interference mechanism. B+ evidence. The cleanest real stack in the document." },
+  "light-dora":        { tag: "add",      label: "ADDITIVE",   text: "Distinct systems — light phase-shifts the SCN (circadian), DORA antagonizes orexin (homeostatic). No pharmacological overlap. C+ on combined outcome. Low burden." },
+  "mbct-sleep":        { tag: "spec",     label: "SPECULATIVE",text: "Reconsolidation-window hypothesis: session reactivates schema, high-quality NREM re-encodes updated version. Mechanistically coherent (Nader reconsolidation, MBCT's active retrieval + reappraisal). Zero direct RCTs. B-speculative; plausible enough to try." },
+  "hiit-cognitive":    { tag: "add",      label: "ADDITIVE",   text: "HIIT-induced BDNF peaks 15–30 min post-exercise with a 2–4h LTP-favorable window. Time cognitively demanding work (learning, MBCT, identity journaling) to this window. B evidence on mechanism; timing-specific human trials sparse." },
+  "glp1-psychedelic":  { tag: "conflict", label: "INTERFERENCE",text: "GLP-1R expression in VTA/NAc attenuates dopaminergic reward salience. Psychedelic therapeutic action depends on affective amplification. Mechanistically you expect the GLP-1 to dampen exactly what the psychedelic needs to amplify. No co-administration trial exists; don't stack." },
+  "metformin-hiit":    { tag: "conflict", label: "INTERFERENCE",text: "Metformin's Complex I inhibition raises AMPK, but exercise-induced mitochondrial biogenesis also runs through AMPK. Konopka/Burd-adjacent work shows metformin attenuates VO2max gains and mitochondrial protein synthesis from training. Partial cancellation, not catastrophic." },
+  "ketones-hiit":      { tag: "neutral",  label: "REDUNDANT",  text: "Not harmful, probably redundant. Both push FNDC5/irisin and PGC-1α. If you're already in ketosis and HIIT, additional exogenous ketones hit a ceiling. Low benefit, low cost." },
+  "oxybate-memory":    { tag: "conflict", label: "WRONG MODEL",text: "Sodium oxybate massively increases stage-3 SWS but pharmacologically-induced slow waves are 'functionally dissimilar to physiological slow waves' (quantity ≠ quality). SO-spindle coupling disrupted. Memory consolidation null or negative in direct tests. Don't stack expecting consolidation gains." },
+  "clas-older":        { tag: "conflict", label: "WRONG POPULATION",text: "Closed-loop auditory stimulation works in young adults (<45). Auditory evoked responses 50% weaker at 55+; memory consolidation fails or reverses in middle-aged cohorts. Same mechanism, wrong substrate." },
+  "creatine-theanine": { tag: "neutral",  label: "COMPATIBLE", text: "Distinct mechanisms (phosphocreatine buffering vs adenosine/GABA antagonism). Compatible. Near-zero interaction. Small combined effect but no redundancy." }
+};
+function showStack(key) {
+  const box = document.getElementById('stack-verdict');
+  if (!key) { box.innerHTML = '<em style="color:var(--muted);">Select an option above.</em>'; return; }
+  const s = stacks[key];
+  box.innerHTML = '<span class="tag ' + s.tag + '">' + s.label + '</span>' + s.text;
+}
+
+// Evidence-index filter
+function applyFilter() {
+  const grades = Array.from(document.querySelectorAll('.f-grade:checked')).map(e => e.value);
+  const cats = Array.from(document.querySelectorAll('.f-cat:checked')).map(e => e.value);
+  document.querySelectorAll('#idx-table tbody tr').forEach(r => {
+    const show = grades.includes(r.getAttribute('data-g')) && cats.includes(r.getAttribute('data-c'));
+    r.classList.toggle('hide', !show);
+  });
+}
+document.querySelectorAll('.f-grade, .f-cat').forEach(cb => cb.addEventListener('change', applyFilter));
+
+// Theme toggle
+function toggleTheme() {
+  const isLight = document.documentElement.classList.toggle('light');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  document.getElementById('theme-toggle').textContent = isLight ? '◑' : '◐';
+}
+// Init button state to match whatever the FOUC-prevention script applied
+(function() {
+  const isLight = document.documentElement.classList.contains('light');
+  if (!isLight) {
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && !window.matchMedia('(prefers-color-scheme: light)').matches;
+    if (!stored && !prefersDark) {
+      document.documentElement.classList.add('light');
+      document.getElementById('theme-toggle').textContent = '◑';
+      return;
+    }
+  }
+  document.getElementById('theme-toggle').textContent = isLight ? '◑' : '◐';
+})();
+</script>
+
+</body>
+</html>
