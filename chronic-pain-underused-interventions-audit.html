@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Underused Chronic Pain Interventions: Personal Value and Policy Value</title>
+<style>
+:root{
+  --bg:#fbf8ef;
+  --ink:#1f1d19;
+  --muted:#666052;
+  --rule:#d7cfbd;
+  --soft:#f1eadc;
+  --soft2:#f7f2e8;
+  --link:#24567a;
+  --a:#2e6b3d;
+  --b:#6e671f;
+  --c:#8a6420;
+  --d:#8a3b22;
+  --f:#7b2020;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:17px/1.62 Georgia,"Iowan Old Style","Palatino Linotype",serif;
+}
+main{
+  max-width:740px;
+  margin:0 auto;
+  padding:2.2rem 1.1rem 5rem;
+}
+h1,h2,h3{
+  font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;
+  font-weight:600;
+  line-height:1.2;
+  letter-spacing:0;
+}
+h1{
+  font-size:2rem;
+  margin:0 0 .35rem;
+}
+h2{
+  font-size:1.28rem;
+  margin:2.35rem 0 .7rem;
+  padding-top:1.2rem;
+  border-top:1px solid var(--rule);
+}
+h3{
+  font-size:1.06rem;
+  margin:1.8rem 0 .45rem;
+}
+p{margin:.82rem 0}
+a{color:var(--link);text-decoration:none;border-bottom:1px dotted var(--link)}
+a:hover{background:#efe8d7}
+.sub{color:var(--muted);font-size:.96rem;margin-top:0}
+.epistemic{
+  background:var(--soft);
+  border-left:3px solid #9d8257;
+  padding:.8rem 1rem;
+  margin:1.35rem 0;
+  font-size:.95rem;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:1rem 0 1.2rem;
+  font-size:.84rem;
+}
+th,td{
+  text-align:left;
+  vertical-align:top;
+  padding:.42rem .48rem;
+  border-bottom:1px solid var(--rule);
+}
+th{
+  color:var(--muted);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:.7rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.grade{
+  display:inline-block;
+  min-width:1.45rem;
+  text-align:center;
+  border-radius:3px;
+  padding:.05rem .25rem;
+  font:700 .78rem/1.35 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#eee5d3;
+}
+.ga{color:var(--a)} .gb{color:var(--b)} .gc{color:var(--c)} .gd{color:var(--d)} .gf{color:var(--f)}
+.label{
+  color:#4f493f;
+  font-weight:600;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:.86rem;
+}
+.note{
+  color:var(--muted);
+  font-size:.92rem;
+}
+.compact li{margin:.3rem 0}
+ol.refs{
+  padding-left:1.35rem;
+  font-size:.87rem;
+}
+ol.refs li{margin:.55rem 0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+@media(max-width:760px){
+  main{padding:1.5rem .85rem 4rem}
+  table{font-size:.78rem}
+  th,td{padding:.34rem .36rem}
+}
+</style>
+</head>
+<body>
+<main>
+
+<h1>Underused Chronic Pain Interventions: Personal Value and Policy Value</h1>
+<p class="sub">A 2026 audit for adults with mixed chronic non-cancer pain.</p>
+
+<div class="epistemic">
+Epistemic status: literature-grounded synthesis as of April 29, 2026. Target population is adults with chronic non-cancer pain, with condition-specific calls for chronic primary or nociplastic pain, fibromyalgia, chronic low back pain, chronic migraine, localized neuropathic pain, obesity-linked knee osteoarthritis, CRPS or refractory neuropathic pain, and chronic pain on long-term opioids. I exclude cancer pain, palliative care, sickle-cell pain, acute postsurgical pain, pediatric pain, and procedure prevention of chronic postsurgical pain. Pelvic pain, EDS-related pain, and post-surgical neuropathic pain appear only where the evidence is direct or the transfer case is narrow. The main updates would come from independent replications of pain reprocessing and EAET, longer sham-controlled neuromodulation trials, better tapering-harm data, and pragmatic trials that track function with pain intensity as one endpoint among several.
+</div>
+
+<p>Chronic pain is a domain where the personal and policy questions come apart. A motivated person can select a phenotype, track sleep and function, stop an intervention that fails, avoid unsafe providers, and make a local tradeoff. A health system has to deal with average implementation, billing incentives, provider drift, coercion, low adherence, and patients who were never good candidates.</p>
+
+<p>I use a narrow frame: which interventions look better than current adoption suggests after correcting for weak controls, regression to the mean, placebo and context effects, functional unblinding, adherence problems, safety burden, patient selection, and chronic pain's long history of overextended treatments.</p>
+
+<p>The pattern is uneven. Some boring interventions deserve more coverage. Some high-tech interventions are real for narrow refractory phenotypes and bad as general pain policy. Some reasonable personal trials should remain policy-light. Some attractive claims shrink as soon as you ask whether pain interference, function, sleep, work, medication use, and durability moved together.</p>
+
+<h2>Method</h2>
+
+<p>I used a mixed chronic-pain target population, then downgraded or upgraded by condition. Direct patient outcomes counted more than mechanism. Pain intensity counted, but not alone. Function, interference, sleep, mood separated from pain, disability, work participation, medication use, durability, dropout, and adverse events carried more weight than a one-point visual analog scale shift.</p>
+
+<p>For evidence, I favored systematic reviews with heterogeneity checks, large RCTs, active comparators, credible shams, long follow-up, responder analyses, and pragmatic trials when the policy question was in view. I penalized waitlists, usual-care controls that add attention more than treatment, weak shams, functional unblinding, small pilot studies, short follow-up, per-protocol analyses after high dropout, enriched responder samples, industry device trials without independent replication, and outcomes that improve distress while leaving pain and function unchanged.</p>
+
+<p>Grades are split. Person-level A means a reasonable default for many motivated people in the named subgroup. B means reasonable for selected people with one major uncertainty. C means a trial only under specific circumstances. D means the cost, risk, or attention load beats expected benefit. F means avoid outside research or special cases. Population-level A means broad guideline or reimbursement support. B means support with criteria. C means study more or allow with constraints. D means do not scale. F means scaling would cause harm, waste, or coercion in expectation.</p>
+
+<h2>Candidate Index</h2>
+
+<table>
+<thead>
+<tr>
+<th>Intervention</th>
+<th>Use case</th>
+<th>Best evidence</th>
+<th>Main upside</th>
+<th>Main concern</th>
+<th>Person</th>
+<th>Population</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Phenotyping before escalation</td><td>Mixed chronic pain</td><td>STarT Back mixed: positive UK trial, weaker US/Danish implementation</td><td>Prevents wrong-pathway care</td><td>Can become testing churn or rationing label</td><td><span class="grade ga">A</span></td><td><span class="grade gb">B</span></td></tr>
+<tr><td>Exercise, resistance, graded activity</td><td>Low back pain, OA, fibromyalgia, deconditioning</td><td>Cochrane exercise evidence, large CLBP review</td><td>Function, disability, sleep, metabolic reserve</td><td>Generic plans cause flares/dropout</td><td><span class="grade ga">A</span></td><td><span class="grade ga">A</span></td></tr>
+<tr><td>CBT-I and sleep treatment</td><td>Chronic pain with insomnia</td><td>CBT-I meta-analyses in musculoskeletal pain</td><td>Strong sleep signal, modest pain amplifier effect</td><td>Sleep restriction can be unsafe if badly screened</td><td><span class="grade ga">A</span></td><td><span class="grade gb">B</span></td></tr>
+<tr><td>Botulinum toxin A</td><td>Chronic migraine only</td><td>PREEMPT/Cochrane, guideline-supported</td><td>Clean phenotype and stopping rule</td><td>Modest mean benefit, procedure burden</td><td><span class="grade ga">A</span></td><td><span class="grade ga">A</span></td></tr>
+<tr><td>Interdisciplinary pain rehabilitation</td><td>High-disability mixed pain</td><td>Multidisciplinary rehab reviews</td><td>Function and medication rationalization</td><td>Expensive, scarce, can become coercive</td><td><span class="grade gb">B</span></td><td><span class="grade gb">B</span></td></tr>
+<tr><td>CBT/ACT pain psychology</td><td>Chronic primary pain, fear avoidance, distress</td><td>Cochrane psychological therapies</td><td>Small but broad interference/function gains</td><td>Waitlist inflation, patient-blaming risk</td><td><span class="grade gb">B</span></td><td><span class="grade gb">B</span></td></tr>
+<tr><td>EAET / PRT / somatic tracking</td><td>Selected primary or nociplastic pain</td><td>PRT RCT, EAET veteran RCT</td><td>Large signal in narrow trials</td><td>Replication and phenotyping</td><td><span class="grade gb">B</span></td><td><span class="grade gc">C</span></td></tr>
+<tr><td>Mindfulness / MBSR</td><td>Low back pain, fibromyalgia, pain distress</td><td>JAMA low-back RCT, mixed reviews</td><td>Interference and reactivity</td><td>Not reliable analgesia</td><td><span class="grade gb">B</span></td><td><span class="grade gb">B</span></td></tr>
+<tr><td>Pain neuroscience education</td><td>Nociplastic/fear-avoidant MSK pain</td><td>Mixed systematic reviews</td><td>Cheap amplifier for graded movement</td><td>Weak standalone effect, dismissal risk</td><td><span class="grade gb">B</span></td><td><span class="grade gc">C</span></td></tr>
+<tr><td>Topical capsaicin / lidocaine</td><td>Localized peripheral neuropathic pain</td><td>Cochrane capsaicin; lidocaine weaker</td><td>Low systemic burden</td><td>Only works for focal peripheral generators</td><td><span class="grade gb">B</span></td><td><span class="grade gb">B</span></td></tr>
+<tr><td>Weight loss / GLP-1 metabolic treatment</td><td>Obesity-linked knee OA</td><td>NEJM semaglutide OA RCT</td><td>Attacks mechanical/metabolic driver</td><td>Cost, GI effects, lean-mass loss, chronic exposure</td><td><span class="grade gb">B</span></td><td><span class="grade gb">B</span></td></tr>
+<tr><td>Opioid tapering / buprenorphine rotation</td><td>Unsafe long-term opioids, OIH concern, OUD risk</td><td>Low-quality rotation review; tapering harm reviews</td><td>Safety, sometimes function/pain stability</td><td>Forced tapering can harm badly</td><td><span class="grade gb">B</span></td><td><span class="grade gb">B</span></td></tr>
+<tr><td>Acupuncture / manual / dry needling</td><td>Low back/neck pain, OA, myofascial pain</td><td>Acupuncture IPD meta-analysis; manual therapy reviews</td><td>Adjunctive short-term relief</td><td>Small sham-adjusted effect, passive-care trap</td><td><span class="grade gc">C</span></td><td><span class="grade gc">C</span></td></tr>
+<tr><td>Non-invasive neuromodulation</td><td>TENS self-trial, rTMS/tDCS specialty/research</td><td>TENS inconclusive; tDCS/rTMS small signals</td><td>Low drug burden, easy TENS trial</td><td>Protocol heterogeneity, short-lived effects</td><td><span class="grade gc">C</span></td><td><span class="grade gc">C</span></td></tr>
+<tr><td>Implanted SCS / PNS</td><td>Refractory painful diabetic neuropathy, selected neuropathic pain</td><td>SENZA-PDN positive; low-back SCS Cochrane negative</td><td>Large responder signal in narrow PDN trial</td><td>Industry, surgery, weak sham in many indications</td><td><span class="grade gb">B</span></td><td><span class="grade gc">C</span></td></tr>
+<tr><td>Low-dose naltrexone</td><td>Fibromyalgia/nociplastic pain, no opioids</td><td>Small meta-analyses, larger negative FM trial</td><td>Cheap, low burden if opioid-free</td><td>Evidence fragile and mixed</td><td><span class="grade gc">C</span></td><td><span class="grade gc">C</span></td></tr>
+<tr><td>Ketamine / NMDA approaches</td><td>Refractory CRPS or neuropathic pain</td><td>Guidelines and reviews: short-term signal, weak durability</td><td>Possible rescue for severe refractory cases</td><td>Monitoring, psychoactive unblinding, misuse, cystitis/liver risk</td><td><span class="grade gc">C</span></td><td><span class="grade gd">D</span></td></tr>
+<tr><td>Cannabinoids</td><td>Selected neuropathic pain with sleep/appetite target</td><td>BMJ review/guideline: small average effects</td><td>Some sleep and pain responders</td><td>THC cognitive/psychiatric/dependence burden</td><td><span class="grade gc">C</span></td><td><span class="grade gd">D</span></td></tr>
+</tbody>
+</table>
+
+<h2>Main Audit</h2>
+
+<h3>Phenotyping before escalation</h3>
+<p><span class="label">Claim.</span> Chronic pain care wastes large amounts of effort by treating "pain" as one bucket. A basic mechanism audit before escalation may be higher value than another generic intervention.</p>
+<p><span class="label">Why it sounds plausible.</span> Neuropathic pain, migraine, obesity-linked OA, inflammatory disease, nociplastic pain, CRPS, sleep-driven amplification, opioid-induced hyperalgesia, and medication-overuse headache are not interchangeable. The same intervention can be sensible in one and useless or harmful in another.</p>
+<p><span class="label">Evidence.</span> Stratified low-back care is the best tested version. The UK STarT Back trial improved disability and cost-effectiveness, while later US and Danish implementation trials were weaker or null.<a href="#ref30">[30]</a><a href="#ref31">[31]</a><a href="#ref32">[32]</a> That pattern is the whole lesson: the idea is strong, the health-system implementation is fragile.</p>
+<p><span class="label">Correction.</span> Biomarker-heavy "precision pain medicine" has not earned a broad recommendation. Questionnaires, diaries, history, exam, medication review, sleep assessment, migraine criteria, neuropathic features, inflammatory red flags, and function goals are more actionable than most exotic tests.</p>
+<p><span class="label">Person-level verdict.</span> A. A motivated person with mixed chronic pain should start here. Stop expanding the workup when new tests stop changing the next decision.</p>
+<p><span class="label">Population-level verdict.</span> B. Health systems should reimburse structured assessment and triage. They should not turn phenotyping into checkbox rationing, incidentaloma hunting, or a permanent "nociplastic" label that blocks re-evaluation.</p>
+<p><span class="label">Safety floor.</span> Red flags first: cancer, infection, fracture, progressive neurologic deficit, inflammatory disease, medication harm, suicidality, and unsafe opioid/sedative combinations. Tests need a decision threshold.</p>
+<p><span class="label">What would change my mind.</span> Pragmatic trials showing that mechanism-based triage improves pain interference, function, and costs across mixed chronic pain beyond low-back subgroups.</p>
+
+<h3>Exercise, resistance training, and graded activity</h3>
+<p><span class="label">Claim.</span> Graded physical activity is over-mentioned and under-implemented. The useful version is not "go exercise"; it is load, pacing, flare management, and progression matched to the pain phenotype.</p>
+<p><span class="label">Why it sounds plausible.</span> Chronic pain erodes capacity. Deconditioning, fear avoidance, weak sleep, metabolic load, and low confidence in movement all increase pain interference. Exercise can improve several of these without needing a large direct analgesic effect.</p>
+<p><span class="label">Evidence.</span> A Cochrane overview across chronic pain found generally favorable but often low-certainty effects, with small benefits and sparse harms reporting.<a href="#ref1">[1]</a> The stronger condition-specific evidence is chronic low back pain: the 2021 Cochrane review included 249 trials and found exercise better than no treatment/usual care/placebo for pain, with smaller gains against active care.<a href="#ref2">[2]</a></p>
+<p><span class="label">Correction.</span> Pain intensity changes are modest. Exercise trials are hard to blind, protocols vary, and adherence selects for people who can tolerate the intervention. The policy-relevant outcome is not a dramatic analgesic effect; it is better function and lower disability at low medical risk.</p>
+<p><span class="label">Person-level verdict.</span> A for OA, chronic low back/neck pain, fibromyalgia, deconditioning, fear avoidance, and metabolic pain load. The N-of-1 trial should run 8-12 weeks. Track walking tolerance, stairs, sleep, flare recovery, and pain interference alongside pain intensity.</p>
+<p><span class="label">Population-level verdict.</span> A. Exercise is one of the few broad chronic-pain interventions where small average effects can justify scaling because it is cheap, safe when screened, and improves non-pain outcomes.</p>
+<p><span class="label">Safety floor.</span> Screen progressive neurologic deficit, acute fracture, acute infection, unstable cardiopulmonary disease, inflammatory flares, severe PEM/ME-CFS pattern, syncope, joint instability, and osteoporosis risk. Start below flare threshold. A flare lasting more than 24-48 hours means dose error, not moral failure.</p>
+<p><span class="label">What would change my mind.</span> Better trials that separate resistance, aerobic, HIIT, aquatic, and graded exposure by phenotype and report responder thresholds plus function.</p>
+
+<h3>CBT-I and sleep treatment</h3>
+<p><span class="label">Claim.</span> Treating insomnia is one of the more underused chronic-pain moves. CBT-I targets the pain-insomnia loop, not general nociception.</p>
+<p><span class="label">Why it sounds plausible.</span> Sleep loss increases pain sensitivity, lowers mood regulation, worsens fatigue, and makes every behavioral intervention harder. In fibromyalgia and chronic musculoskeletal pain, the sleep-pain loop is often a central amplifier.</p>
+<p><span class="label">Evidence.</span> A 2024 systematic review and dose-response meta-analysis in chronic musculoskeletal pain found CBT-I improves sleep, with smaller and more variable effects on pain intensity and disability.<a href="#ref9">[9]</a> A 2022 review of non-pharmacological sleep interventions in chronic pain found a large sleep-quality signal in the CBT-I subset, with pain outcomes less consistent.<a href="#ref10">[10]</a></p>
+<p><span class="label">Correction.</span> The strongest endpoint is sleep, not pain. Trials often use waitlist or weak controls. Digital CBT-I improves access but does not remove adherence problems.</p>
+<p><span class="label">Person-level verdict.</span> A if insomnia is active. Minimum trial is 4-8 weeks. Stop or modify sleep restriction if there is dangerous daytime sleepiness, hypomania, seizure risk, or no sleep-efficiency or Insomnia Severity Index signal by 6-8 weeks.</p>
+<p><span class="label">Population-level verdict.</span> B. Coverage should include digital and group CBT-I for chronic pain with insomnia. Sleep-hygiene pamphlets are not a substitute.</p>
+<p><span class="label">Safety floor.</span> Screen obstructive sleep apnea, restless legs, bipolar disorder, seizure disorder, parasomnias, shift-work constraints, sedatives, opioids, alcohol, and safety-sensitive driving/work.</p>
+<p><span class="label">What would change my mind.</span> Trials that show durable improvements in pain interference and medication use after insomnia remission, beyond better sleep scores.</p>
+
+<h3>Botulinum toxin A for chronic migraine</h3>
+<p><span class="label">Claim.</span> Botulinum toxin is not an underused chronic-pain treatment in general. It is a still-misallocated chronic migraine treatment.</p>
+<p><span class="label">Why it sounds plausible.</span> Chronic migraine is a specific disease state, not "head pain." The mechanism is plausibly peripheral neuropeptide release and trigeminovascular sensitization modulation, and the treatment has a built-in tracking metric: monthly headache days.</p>
+<p><span class="label">Evidence.</span> The Cochrane review of botulinum toxin for migraine found chronic migraine headache days reduced by about 1.9 days per month versus placebo, with more than 4000 participants across trials and stronger evidence for chronic than episodic migraine.<a href="#ref24">[24]</a> NICE recommends use for adults with chronic migraine after failure of at least three preventives and with medication-overuse addressed.<a href="#ref25">[25]</a></p>
+<p><span class="label">Correction.</span> The mean effect is modest. Placebo injection response is large. Repeated cycles and specialist access matter. It has no role as a generic chronic daily headache intervention unless the chronic migraine phenotype is real.</p>
+<p><span class="label">Person-level verdict.</span> A for true chronic migraine: at least 15 headache days per month, migraine features on at least 8 days, and inadequate response or intolerance to oral preventives. Trial two to three 12-week cycles. Stop if headache days or function do not move meaningfully.</p>
+<p><span class="label">Population-level verdict.</span> A inside the chronic migraine criteria. Coverage should require headache diary documentation and response tracking, not endless injections by default.</p>
+<p><span class="label">Safety floor.</span> Trained injector, migraine diagnosis, medication-overuse plan, neuromuscular disorder screen, and clear instructions for dysphagia, respiratory symptoms, or spread-of-toxin weakness.</p>
+<p><span class="label">What would change my mind.</span> Comparative effectiveness data versus CGRP-pathway preventives in real-world chronic migraine subgroups.</p>
+
+<h3>Interdisciplinary pain rehabilitation</h3>
+<p><span class="label">Claim.</span> Intensive interdisciplinary rehab is one of the most coherent models for high-disability chronic pain, but it is not a universal first-line treatment.</p>
+<p><span class="label">Why it sounds plausible.</span> Severe chronic pain is often a whole-life system: fear, sleep, medication effects, deconditioning, depression, family accommodation, work loss, and repeated failed procedures. Single-modality care is often too weak for that system.</p>
+<p><span class="label">Evidence.</span> Systematic reviews and health-technology assessments support multimodal or interdisciplinary programs for some long-term pain outcomes, with function and work participation often more persuasive than pain intensity.<a href="#ref7">[7]</a><a href="#ref8">[8]</a> The evidence is heterogeneous because the intervention is heterogeneous.</p>
+<p><span class="label">Correction.</span> Program quality dominates. Pre-post improvements can be regression to the mean plus selection. A motivated patient who can attend an expensive program is not representative of all chronic-pain patients.</p>
+<p><span class="label">Person-level verdict.</span> B. Best fit is high disability, work loss, fear avoidance, medication complexity, failed single-modality care, and a realistic ability to attend. Stop if the program is generic wellness, coercive tapering, or no measurable functional gain by midpoint.</p>
+<p><span class="label">Population-level verdict.</span> B with criteria. Reimburse for high-disability and high-utilization cases. Do not make it a mandatory gate before other appropriate care.</p>
+<p><span class="label">Safety floor.</span> Coordinated medical, psychological, and physical plan. No forced rapid opioid discontinuation. Psychiatric risk management. Escalation path for withdrawal, suicidality, neurologic change, or uncontrolled flares.</p>
+<p><span class="label">What would change my mind.</span> Pragmatic trials comparing high-quality interdisciplinary rehab against equally intensive unimodal care, with work participation and medication outcomes at 12 months.</p>
+
+<h3>CBT and ACT for chronic pain</h3>
+<p><span class="label">Claim.</span> CBT and ACT are useful chronic-pain adjuncts when sold honestly. They are not evidence that pain is imaginary, and they are not a substitute for medical evaluation.</p>
+<p><span class="label">Why it sounds plausible.</span> Avoidance, catastrophizing, values conflict, fear of movement, poor pacing, and distress can maintain pain interference even when nociception or neuropathy started the process.</p>
+<p><span class="label">Evidence.</span> The Cochrane review of psychological therapies for chronic pain included 75 studies and around 9400 adults. CBT had small benefits for pain, disability, and distress; ACT evidence was lower-certainty and smaller.<a href="#ref3">[3]</a></p>
+<p><span class="label">Correction.</span> Psychotherapy trials are unblinded, often use waitlists, and can be allegiance-heavy. The average effect is not large. Distress reduction should not be mislabeled as nociceptive pain reduction.</p>
+<p><span class="label">Person-level verdict.</span> B for chronic primary pain, fibromyalgia, fear avoidance, high distress, and pain-related disability. Bad fit when active disease is being dismissed or the patient experiences the framing as gaslighting.</p>
+<p><span class="label">Population-level verdict.</span> B with criteria. Coverage should support pain-focused CBT/ACT as one option, not as a compliance hurdle or proof that medical care has ended.</p>
+<p><span class="label">Safety floor.</span> Both/and framing: pain is real, danger appraisal and avoidance may be modifiable, red flags still count. Screen suicidality, mania/psychosis, severe dissociation, and medical diagnostic adequacy.</p>
+<p><span class="label">What would change my mind.</span> More active-comparator trials with function, sleep, medication use, and disability outcomes beyond 12 months.</p>
+
+<h3>EAET, pain reprocessing therapy, and somatic tracking</h3>
+<p><span class="label">Claim.</span> The newer "neuroplastic pain" therapies look better at the person level than the population level. The signal is real enough for selected use and narrow enough to resist broad scaling.</p>
+<p><span class="label">Why it sounds plausible.</span> Some chronic pain is maintained by threat prediction, fear, attention, emotion, and avoidance after tissue danger is low. In that subgroup, changing threat appraisal could outperform generic coping therapy.</p>
+<p><span class="label">Evidence.</span> The PRT RCT in primary chronic back pain reported large post-treatment pain reductions versus open-label saline placebo and usual care, with 66% pain-free or nearly pain-free at post-treatment versus 20% in placebo.<a href="#ref4">[4]</a> EAET outperformed CBT in a 2024 trial of older veterans with chronic musculoskeletal pain.<a href="#ref5">[5]</a> These are not trivial findings.</p>
+<p><span class="label">Correction.</span> PRT needs independent replication. The trials are vulnerable to expectancy, therapist allegiance, and phenotype selection. A therapy can work for primary or centralized pain and still be harmful if applied to inflammatory, neuropathic, unstable, or underdiagnosed pain.</p>
+<p><span class="label">Person-level verdict.</span> B for selected primary/nociplastic pain with low structural threat, high fear, avoidance, or trauma/emotion links. Minimum trial is 4-12 weeks. Stop if the therapist denies biomedical evaluation or exposure worsens function for several weeks.</p>
+<p><span class="label">Population-level verdict.</span> C. Reimburse in constrained settings with phenotype discipline and provider training. This belongs in "try carefully" and "replicate aggressively"; keep it out of general pain-model messaging.</p>
+<p><span class="label">Safety floor.</span> Medical workup adequate for the claim. No psychogenic certainty as a default. Screen dissociation, PTSD destabilization, psychosis, mania, suicidality, and substance instability. The clinician must keep re-evaluation triggers open.</p>
+<p><span class="label">What would change my mind.</span> Independent multisite replications against credible active controls, with baseline phenotype moderators and functional outcomes.</p>
+
+<h3>Mindfulness and MBSR</h3>
+<p><span class="label">Claim.</span> Mindfulness is better understood as pain-interference and reactivity training than as analgesia.</p>
+<p><span class="label">Why it sounds plausible.</span> Pain is partly sensation and partly salience, aversion, vigilance, and narrative load. Training attention and reducing automatic struggle can lower interference even when intensity changes little.</p>
+<p><span class="label">Evidence.</span> In chronic low back pain, the Cherkin JAMA trial found MBSR and CBT improved function and pain bothersomeness versus usual care, with partial durability.<a href="#ref27">[27]</a> Broader reviews find modest, low-certainty benefits across chronic-pain conditions.<a href="#ref28">[28]</a></p>
+<p><span class="label">Correction.</span> Many trials use usual-care or waitlist comparators. Effects shrink against active care. Practice adherence matters. Trauma and dissociation risks are real in a minority.</p>
+<p><span class="label">Person-level verdict.</span> B for pain distress, rumination, arousal, low back pain, fibromyalgia, or insomnia-adjacent pain. Trial 8 weeks. Track function and interference, not whether the practice feels spiritually successful.</p>
+<p><span class="label">Population-level verdict.</span> B. Group and digital programs are cheap enough to justify coverage. They should not be framed as acceptance of undertreated pain.</p>
+<p><span class="label">Safety floor.</span> Trauma-sensitive options, eyes-open grounding, opt-out from long body scans, and clinical escalation for panic, dissociation, mania, psychosis, or suicidality.</p>
+<p><span class="label">What would change my mind.</span> Better active-comparator trials separating pain intensity, pain interference, mood, and sleep.</p>
+
+<h3>Pain neuroscience education</h3>
+<p><span class="label">Claim.</span> Pain neuroscience education is useful when it changes behavior. As a lecture, it is overvalued.</p>
+<p><span class="label">Why it sounds plausible.</span> If pain is interpreted as tissue damage, movement becomes threatening. If the person can update that model without feeling dismissed, graded movement and exposure become more possible.</p>
+<p><span class="label">Evidence.</span> Reviews of PNE in chronic musculoskeletal pain find small or inconsistent pain and disability effects, with stronger logic when PNE is combined with exercise or rehab.<a href="#ref6">[6]</a></p>
+<p><span class="label">Correction.</span> The same slides can either validate pain physiology or sound like "nothing is wrong." Standalone PNE is not a reliable analgesic and does not escape placebo/context problems.</p>
+<p><span class="label">Person-level verdict.</span> B as an amplifier for graded movement in fear-avoidant or nociplastic presentations. Trial 2-6 sessions plus 6-8 weeks of behavioral experiments.</p>
+<p><span class="label">Population-level verdict.</span> C. Reimburse only as part of active rehabilitation or psychologically informed care. Do not use it as a cheap substitute for diagnostics, medication, or accommodations.</p>
+<p><span class="label">Safety floor.</span> Red flags and diagnostic adequacy first. Present an additive model: pain can be real, modulated, and still medically revisable.</p>
+<p><span class="label">What would change my mind.</span> Trials showing PNE plus graded activity outperforms equally warm education plus graded activity on function and interference.</p>
+
+<h3>Topical capsaicin and lidocaine</h3>
+<p><span class="label">Claim.</span> Topicals are underrated for localized peripheral neuropathic pain and overrated for diffuse pain.</p>
+<p><span class="label">Why it sounds plausible.</span> A focal peripheral generator can sometimes be treated locally. That avoids sedation, cognitive effects, falls, constipation, dependence, and many systemic drug interactions.</p>
+<p><span class="label">Evidence.</span> Cochrane finds high-concentration 8% capsaicin can provide moderate or substantial relief for a minority of adults with chronic neuropathic pain, especially localized peripheral neuropathies.<a href="#ref15">[15]</a> Lidocaine is safer and widely used, but Cochrane judged the RCT evidence insufficient and low quality.<a href="#ref16">[16]</a></p>
+<p><span class="label">Correction.</span> Capsaicin burns and can unblind trials. Lidocaine's popularity exceeds its trial certainty. Neither is a deep spine, widespread fibromyalgia, or central sensitization treatment.</p>
+<p><span class="label">Person-level verdict.</span> B for localized postherpetic neuralgia, painful diabetic neuropathy patches, focal allodynia, or postsurgical neuropathic pain. N-of-1 testability is high.</p>
+<p><span class="label">Population-level verdict.</span> B. Cover focal topical trials before escalating to systemic sedating drugs when the target is local and peripheral.</p>
+<p><span class="label">Safety floor.</span> Intact skin only. Avoid mucosa, eyes, large-area or occluded lidocaine, heating pads over lidocaine, and repeated application through dermatitis or burns.</p>
+<p><span class="label">What would change my mind.</span> Better responder prediction for focal neuropathic pain and direct comparisons against gabapentinoids/SNRIs on function and adverse effects.</p>
+
+<h3>Weight loss, metabolic treatment, and GLP-1s</h3>
+<p><span class="label">Claim.</span> Metabolic treatment is high-value for obesity-linked knee OA and overextended if sold as chronic-pain pharmacology.</p>
+<p><span class="label">Why it sounds plausible.</span> Obesity can drive knee OA through load, adipokines, inflammation, sleep apnea, low activity tolerance, and insulin resistance. In that phenotype, pain also has mechanical and metabolic drivers.</p>
+<p><span class="label">Evidence.</span> The STEP 9 NEJM trial randomized adults with obesity and moderate knee OA to semaglutide 2.4 mg or placebo plus diet/activity counseling for 68 weeks. WOMAC pain fell about 42 points with semaglutide versus 28 with placebo on a 0-100 scale.<a href="#ref26">[26]</a> Older weight-loss evidence supports dose-related pain and function improvements in knee OA when weight loss is substantial.<a href="#ref33">[33]</a></p>
+<p><span class="label">Correction.</span> The evidence is for knee OA with obesity. It does not transfer to fibromyalgia, EDS pain, pelvic pain, CRPS, or migraine. Semaglutide is expensive, GI-limited, chronic, and industry-sponsored in this indication. Discontinuation durability is unclear.</p>
+<p><span class="label">Person-level verdict.</span> B for obesity plus knee/hip OA, metabolic disease, sleep apnea, or mechanical back load. Bad fit for normal BMI, frailty, eating-disorder risk, pancreatitis/gallbladder risk, severe gastroparesis, or inability to continue treatment.</p>
+<p><span class="label">Population-level verdict.</span> B. Narrowly recommend and reimburse where obesity and OA/metabolic drivers are explicit. Do not make weight loss a gatekeeping ritual before analgesia, mobility aids, or surgery evaluation.</p>
+<p><span class="label">Safety floor.</span> Medical supervision, contraindication screen, protein and resistance training to limit lean-mass loss, diabetes medication adjustment, pregnancy screen, and monitoring for dehydration, gallbladder disease, pancreatitis symptoms, severe GI intolerance, and compounded-product risk.</p>
+<p><span class="label">What would change my mind.</span> Post-discontinuation pain data, lean-mass-adjusted outcomes, and trials in other pain phenotypes with clear metabolic enrichment.</p>
+
+<h3>Opioid tapering and buprenorphine rotation</h3>
+<p><span class="label">Claim.</span> Patient-centered opioid reduction and buprenorphine rotation can be high-value. Forced tapering is a different intervention and should not borrow the same evidence.</p>
+<p><span class="label">Why it sounds plausible.</span> Long-term full agonist opioids can produce tolerance, sedation, constipation, endocrine effects, sleep-disordered breathing, falls, overdose risk, withdrawal cycling, and possibly opioid-induced hyperalgesia. Buprenorphine may preserve analgesia with a different safety profile for selected patients.</p>
+<p><span class="label">Evidence.</span> Reviews of opioid dose reduction find inadequate evidence to fully balance benefits and harms, with better outcomes in voluntary, supported tapering than in administrative tapering.<a href="#ref29">[29]</a> A patient-centered tapering cohort reduced dose without mean pain worsening, but it was uncontrolled and selected.<a href="#ref34">[34]</a> A JAMA Network Open review found low-quality evidence that buprenorphine rotation may reduce pain without frequent precipitated withdrawal, but better trials are needed.<a href="#ref35">[35]</a> CDC's 2022 guideline emphasizes collaboration and warns against abrupt discontinuation.<a href="#ref36">[36]</a></p>
+<p><span class="label">Correction.</span> The favorable tapering literature is confounded by motivation and support intensity. The harmful real-world version is forced, fast, unsupported, and sometimes suicidal.</p>
+<p><span class="label">Person-level verdict.</span> B when harms exceed benefits, the patient wants change, and prescriber support exists. D for forced tapering or unsupported rotation. Minimum trial is months for tapering, 2-8 weeks for rotation stabilization.</p>
+<p><span class="label">Population-level verdict.</span> B with strict criteria. Reimburse slow taper support, withdrawal care, behavioral support, naloxone, OUD assessment, and buprenorphine analgesic competence. Do not reward dose cuts as a quality metric.</p>
+<p><span class="label">Safety floor.</span> No abandonment. Screen OUD, overdose history, suicidality, benzodiazepines, alcohol, gabapentinoids, sleep apnea, current MME, pregnancy, and respiratory disease. Pause or reverse if function, sleep, mood, suicidality, or pain destabilizes.</p>
+<p><span class="label">What would change my mind.</span> Randomized or strong quasi-experimental studies comparing taper support, buprenorphine rotation, and stable opioid continuation with suicide, overdose, pain interference, and function outcomes.</p>
+
+<h3>Acupuncture, manual therapy, and dry needling</h3>
+<p><span class="label">Claim.</span> These are reasonable adjuncts for some musculoskeletal pain patients, but the best interpretation is modest short-term help, not a hidden high-effect treatment class.</p>
+<p><span class="label">Why it sounds plausible.</span> Touch, needling, expectation, local tissue input, short-term analgesia, reduced guarding, and a non-drug care context can help some people move and sleep better.</p>
+<p><span class="label">Evidence.</span> Vickers' individual patient data meta-analysis included 39 trials and 20,827 participants, finding acupuncture superior to sham and no-acupuncture controls for back/neck pain, OA, headache/migraine, and shoulder pain, with small sham-adjusted effects.<a href="#ref21">[21]</a> Spinal manipulative therapy for chronic low back pain shows small effects similar to other recommended therapies.<a href="#ref22">[22]</a> Dry needling evidence is more mixed and short-term.<a href="#ref23">[23]</a></p>
+<p><span class="label">Correction.</span> Sham controls are not inert. Provider allegiance and patient expectation are large. Repeated passive treatment can become a second dependency loop.</p>
+<p><span class="label">Person-level verdict.</span> C, or B-minus if the patient likes it, can afford it, and uses it to enable activity. Trial 4-8 sessions. Stop if no functional signal after 4-6 sessions or the provider pushes indefinite maintenance.</p>
+<p><span class="label">Population-level verdict.</span> C. Cover short bounded courses for selected musculoskeletal pain, not open-ended maintenance or replacement for active rehab.</p>
+<p><span class="label">Safety floor.</span> Licensed practitioner, sterile single-use needles, anticoagulation and immune-risk screen, no high-velocity cervical manipulation with vascular or neurologic red flags, and escalation for dyspnea after thoracic needling.</p>
+<p><span class="label">What would change my mind.</span> Trials that show bounded acupuncture or manual therapy increases activity and reduces medication use beyond active contextual care.</p>
+
+<h3>Non-invasive neuromodulation: TENS, tDCS, rTMS</h3>
+<p><span class="label">Claim.</span> TENS is a cheap personal experiment. tDCS and rTMS for pain are research or specialty options. None should be treated as a broad chronic-pain fix.</p>
+<p><span class="label">Why it sounds plausible.</span> Pain is electrically and network-mediated. Segmental gating, endogenous opioid release, and cortical excitability modulation are plausible analgesic mechanisms.</p>
+<p><span class="label">Evidence.</span> The Cochrane overview of TENS for chronic pain could not draw reliable efficacy conclusions because trials were small and inconsistently reported.<a href="#ref17">[17]</a> tDCS reviews show small short-term signals with heavy protocol heterogeneity and sham concerns.<a href="#ref18">[18]</a> rTMS has signals in some pain reviews. Durability and protocol selection remain unsettled.</p>
+<p><span class="label">Correction.</span> Device interventions are especially vulnerable to weak sham controls, functional unblinding, industry enthusiasm, and selective responders. A transient session effect is not a durable disability intervention.</p>
+<p><span class="label">Person-level verdict.</span> C. TENS is reasonable to self-test for localized flares over 1-2 weeks. Stop if there is no reproducible benefit. tDCS/rTMS should be treated as specialty or research, not consumer optimization.</p>
+<p><span class="label">Population-level verdict.</span> C. Allow low-cost TENS access, study stimulation protocols, and resist broad reimbursement for poorly phenotyped pain.</p>
+<p><span class="label">Safety floor.</span> Screen implanted pacemakers/ICDs/neurostimulators, seizure history, pregnancy when relevant, skin integrity, and cortical-stimulation contraindications. No TENS over carotid sinus, anterior neck, chest, damaged skin, or implanted-device fields without clearance.</p>
+<p><span class="label">What would change my mind.</span> Preregistered sham-controlled protocols with durable pain interference and function outcomes, plus responder predictors.</p>
+
+<h3>Implanted neuromodulation: SCS and PNS</h3>
+<p><span class="label">Claim.</span> Implanted neuromodulation is real for some refractory neuropathic phenotypes and poor policy for nonspecific chronic back pain.</p>
+<p><span class="label">Why it sounds plausible.</span> Some refractory peripheral or spinal pain states are driven by aberrant afferent signaling and dorsal horn network behavior. An implant can modulate that input continuously when medication fails.</p>
+<p><span class="label">Evidence.</span> The SENZA-PDN trial of 10-kHz spinal cord stimulation in refractory painful diabetic neuropathy showed a large responder advantage over conventional medical management, with longer-term follow-up in implanted/crossover cohorts.<a href="#ref19">[19]</a> For chronic low back pain, Cochrane found no meaningful improvement in pain, function, or quality of life versus placebo at six months.<a href="#ref20">[20]</a> Peripheral nerve stimulation evidence is condition-specific and weaker overall.<a href="#ref37">[37]</a></p>
+<p><span class="label">Correction.</span> The favorable PDN evidence is open-label and industry-linked. Many implant literatures have weak shams and crossover designs. The surgical burden is not small: infection, lead migration, revision, explant, MRI/procedure constraints, and device management.</p>
+<p><span class="label">Person-level verdict.</span> B for refractory painful diabetic neuropathy and selected focal neuropathic, radicular, postsurgical, or CRPS-like pain after full workup. Do not implant without a trial showing at least 50% pain relief or clear functional gain.</p>
+<p><span class="label">Population-level verdict.</span> C. Reimburse with strict criteria, registry follow-up, functional outcomes, complication reporting, and no drift into poorly phenotyped centralized pain.</p>
+<p><span class="label">Safety floor.</span> Experienced center, psychological and anatomical selection, infection/coagulation screen, sterile pathway, device counseling, and a plan for failed trials, revisions, and explant.</p>
+<p><span class="label">What would change my mind.</span> Independent sham-controlled or strong pragmatic trials showing durable function and medication benefits in specific neuropathic indications.</p>
+
+<h3>Low-dose naltrexone</h3>
+<p><span class="label">Claim.</span> Low-dose naltrexone is a plausible personal trial in fibromyalgia-like pain, not a proven population-level chronic-pain treatment.</p>
+<p><span class="label">Why it sounds plausible.</span> The mechanism story is neuroimmune modulation, glial/TLR4 effects, and opioid-system rebound. The practical appeal is low cost and low systemic burden in an opioid-free patient.</p>
+<p><span class="label">Evidence.</span> Reviews and meta-analyses of LDN for fibromyalgia find small and fragile signals across small trials.<a href="#ref11">[11]</a><a href="#ref12">[12]</a> The larger 6 mg randomized double-blind placebo-controlled fibromyalgia trial did not find superiority for pain.<a href="#ref13">[13]</a></p>
+<p><span class="label">Correction.</span> The online anecdote base is stronger than the trial base. A cheap generic with no sponsor can be under-studied and weak. The current evidence is compatible with a responder subgroup, though it has not defined one.</p>
+<p><span class="label">Person-level verdict.</span> C. Reasonable for fibromyalgia or nociplastic pain if the person is opioid-free, accepts off-label uncertainty, and tracks pain, fatigue, sleep, and function for 8-12 weeks.</p>
+<p><span class="label">Population-level verdict.</span> C. Study more. Do not build broad coverage or guideline language around it yet, except perhaps as a low-risk off-label option with opioid exclusions.</p>
+<p><span class="label">Safety floor.</span> No current opioids, buprenorphine, methadone, tramadol, kratom, or expected opioid need without a plan. Review liver disease, pregnancy, compounding quality, insomnia/vivid dreams, and emergency analgesia.</p>
+<p><span class="label">What would change my mind.</span> A large independent RCT in fibromyalgia/nociplastic pain with responder analyses, fatigue/function endpoints, and opioid-free safety protocol.</p>
+
+<h3>Ketamine and NMDA approaches</h3>
+<p><span class="label">Claim.</span> Ketamine belongs in selected severe refractory cases, not in routine mixed chronic pain.</p>
+<p><span class="label">Why it sounds plausible.</span> NMDA antagonism can interrupt central sensitization and may help some CRPS or neuropathic pain states. Its antidepressant effects can also matter in severe comorbid depression. That antidepressant pathway is a separate claim from chronic-pain analgesia.</p>
+<p><span class="label">Evidence.</span> Guidelines and reviews give the strongest chronic-pain support around CRPS or refractory neuropathic pain, with short-term analgesic signals and weak durability.<a href="#ref14">[14]</a> CADTH's 2023 update found limited, heterogeneous evidence and persistent safety/monitoring concerns.<a href="#ref14">[14]</a></p>
+<p><span class="label">Correction.</span> Ketamine is functionally unblinded, protocols vary, follow-up is short, and private-clinic incentives are bad. A patient can feel dramatic relief for days and still have no durable functional intervention.</p>
+<p><span class="label">Person-level verdict.</span> C for severe refractory CRPS or neuropathic pain in a specialist protocol. D for garden-variety mixed chronic pain or wellness-clinic dose chasing.</p>
+<p><span class="label">Population-level verdict.</span> D. Reimburse only narrow refractory protocols or trials. Do not scale infusion clinics for mixed chronic pain.</p>
+<p><span class="label">Safety floor.</span> Monitored setting, blood pressure and cardiovascular screen, psychosis/mania/substance-use screen, liver and urinary monitoring for repeated use, sedation interaction review, and emergency response capacity. Avoid casual compounded oral or nasal escalation.</p>
+<p><span class="label">What would change my mind.</span> Durable controlled evidence in CRPS or neuropathic pain with function, opioid use, cognition, urinary, hepatic, and misuse outcomes.</p>
+
+<h3>Cannabinoids</h3>
+<p><span class="label">Claim.</span> Cannabinoids help some chronic-pain patients through small pain effects, sleep, appetite, and salience. The broad chronic-pain policy case is weak.</p>
+<p><span class="label">Why it sounds plausible.</span> CB1/CB2 systems modulate nociception, sleep, affect, and reward. Some patients want less NSAID, gabapentinoid, or opioid exposure and can tolerate cannabinoids better than those drugs.</p>
+<p><span class="label">Evidence.</span> The BMJ systematic review of medical cannabis/cannabinoids for chronic pain found small improvements in pain, sleep, and physical functioning, with increased adverse events.<a href="#ref38">[38]</a> The linked BMJ guideline made only a weak recommendation for a trial of non-inhaled medical cannabis or cannabinoids when standard care is insufficient.<a href="#ref39">[39]</a></p>
+<p><span class="label">Correction.</span> Psychoactive unblinding is large. Products vary. THC brings cognition, anxiety, psychosis, driving, dependence, and cardiovascular concerns. CBD-only claims are often ahead of evidence.</p>
+<p><span class="label">Person-level verdict.</span> C for selected neuropathic or mixed pain with insomnia/appetite issues and low psychosis/SUD risk. Trial 2-4 weeks. Stop if dose escalates without function gain, cognition worsens, anxiety rises, or driving/work safety is affected.</p>
+<p><span class="label">Population-level verdict.</span> D. Allow clinician-supervised trials where legal. Avoid broad promotion or reimbursement for a variable commercial product class as chronic-pain treatment.</p>
+<p><span class="label">Safety floor.</span> Avoid pregnancy/lactation, psychosis history, unstable bipolar disorder, cannabis use disorder, high-THC products in high cardiovascular risk, driving while impaired, and unsafe sedative/opioid/alcohol stacking.</p>
+<p><span class="label">What would change my mind.</span> Formulation-specific trials with active placebos, long-term cognition/SUD outcomes, and clear responder phenotypes.</p>
+
+<h2>Cross-Cutting Patterns</h2>
+
+<p>The interventions most likely underrated because they are boring are exercise/resistance training, CBT-I, topical agents for focal neuropathic pain, and basic phenotyping. None promises a dramatic cure. All can reduce disability or avoid worse care when matched well.</p>
+
+<p>The interventions underrated because of institutional incentives are interdisciplinary rehabilitation, careful opioid taper support, buprenorphine rotation, and perhaps low-dose naltrexone. These require time, coordination, or generic prescribing. That does not prove effect. It explains why evidence can remain thinner than clinical plausibility.</p>
+
+<p>The interventions overrated by chronic pain's evidentiary environment are ketamine for generic pain, broad cannabinoid use, consumer neuromodulation, unbounded manual/bodywork maintenance, and any therapy that converts "central sensitization" into a universal explanation. Chronic pain creates high regression to the mean, high placebo/context response, high desperation, and many outcomes that can improve because the patient received attention and hope.</p>
+
+<p>The reference-class adjustment is harshest for devices, procedures, and psychological cures. Devices inherit the history of weak shams and industry enthusiasm. Psychological therapies inherit waitlist inflation and the risk of patient-blaming. Supplements and generic drugs inherit the mechanism-story failure mode. Opioid policy inherits both sides of a disaster: overconfident scaling of full agonists, followed by overconfident administrative tapering.</p>
+
+<h2>Stacking</h2>
+
+<p>Stacking is plausible only when mechanisms differ, risks do not compound, and adherence remains realistic. A good stack for many chronic-pain patients is not ten interventions. It is phenotyping, one active capacity intervention, one amplifier, and one safety review.</p>
+
+<p>Examples: chronic low back pain with insomnia might use phenotyping, graded resistance/walking, CBT-I, and optional CBT/ACT or MBSR if fear or distress blocks function. Obesity-linked knee OA might use weight loss or GLP-1 when indicated, resistance training, sleep apnea treatment if present, and topical or medication support during the activity ramp. Chronic migraine should not be folded into generic pain; it needs headache-day tracking, medication-overuse review, and migraine-specific prevention such as botulinum toxin or CGRP-pathway treatment when indicated.</p>
+
+<p>Interference matters. CBT-I sleep restriction can temporarily worsen pain and undermine exercise. Aggressive exercise can sabotage a PRT-style safety-learning frame. Cannabis or ketamine can blur whether sleep, mood, cognition, or pain changed. Opioid tapering during a major rehab push may help some people and destabilize others. The common chronic-pain failure mode is that the protocol becomes another full-time job.</p>
+
+<h2>Person-Level Recommendations</h2>
+
+<p>Reasonable person-level defaults for the right subgroup: phenotyping before escalation, graded exercise/resistance, CBT-I when insomnia is present, botulinum toxin for true chronic migraine, and topical capsaicin/lidocaine for focal peripheral neuropathic pain.</p>
+
+<p>Reasonable selected options: interdisciplinary pain rehab for high disability, CBT/ACT for pain interference and fear avoidance, EAET/PRT for well-selected primary or nociplastic pain, MBSR for distress/interference, metabolic/GLP-1 treatment for obesity-linked knee OA, and voluntary opioid taper or buprenorphine rotation when opioid harms exceed benefits.</p>
+
+<p>Discuss with a clinician before trialing: GLP-1s, botulinum toxin, low-dose naltrexone, buprenorphine rotation, implanted neuromodulation, ketamine, cannabinoids if psychiatric/cardiovascular/substance-use risk is present, and any intervention requiring medication changes.</p>
+
+<p>Trial or refractory-case options: ketamine for CRPS/refractory neuropathic pain, implanted SCS/PNS outside painful diabetic neuropathy or clear focal neuropathic indications, rTMS/tDCS for pain, low-dose naltrexone if the aim is population-level proof, and most precision-biomarker matching tools.</p>
+
+<p>Ignore or deprioritize for now: CBD-only analgesia claims, consumer tDCS, indefinite passive bodywork maintenance, SCS for nonspecific chronic low back pain, psychedelics for chronic pain without direct pain-outcome evidence, and any "central sensitization" protocol that closes medical re-evaluation.</p>
+
+<h2>Population-Level Recommendations</h2>
+
+<p>Reimburse across common use cases: graded exercise/resistance programs with pacing and flare management; CBT-I for chronic pain with insomnia; chronic migraine botulinum toxin inside criteria; bounded topical trials for focal neuropathic pain; structured chronic-pain assessment that separates nociceptive, neuropathic, nociplastic, migraine, sleep, metabolic, medication, and psychiatric risk patterns.</p>
+
+<p>Reimburse with criteria: interdisciplinary pain rehab for high-disability cases; pain-focused CBT/ACT; EAET/PRT with phenotype discipline and provider training; metabolic/GLP-1 treatment for obesity-linked OA where metabolic indication is present; voluntary opioid taper support and buprenorphine rotation; acupuncture/manual therapy as bounded adjuncts; implanted neuromodulation for refractory painful diabetic neuropathy and well-selected neuropathic pain.</p>
+
+<p>Allow without broad promotion: cannabinoids, low-dose naltrexone, TENS self-trials, dry needling, and rTMS/tDCS outside research or specialty contexts.</p>
+
+<p>Needs better trials: PRT/EAET replication, LDN responder subgroup work, ketamine durability and harms, stimulation protocols, PNS indications, tapering versus buprenorphine rotation, and pragmatic phenotyping that changes decisions.</p>
+
+<p>Do not build into broad guidelines: ketamine infusion clinics for mixed chronic pain, SCS for nonspecific low back pain, cannabis as general chronic-pain replacement therapy, consumer brain stimulation, mandatory psych treatment before medical care, and forced opioid tapering.</p>
+
+<h2>Limitations</h2>
+
+<p>Chronic pain is not one disease. A grade for mixed chronic non-cancer pain can hide true effects in small subgroups and null effects elsewhere. Fibromyalgia, chronic low back pain, migraine, CRPS, pelvic pain, EDS-related pain, neuropathic pain, and post-surgical neuropathic pain should not be pooled without condition-level checks.</p>
+
+<p>Publication bias is likely. Weak positive trials survive better than negative trials. Psychotherapy, device, and complementary-medicine trials are hard to blind. Functional unblinding is not a footnote when the endpoint is subjective pain. Regression to the mean is large because people often seek care during flares.</p>
+
+<p>Distress reduction counts, and analgesia needs separate evidence. A patient who sleeps better, fears movement less, or feels less trapped has a meaningful outcome. The policy error is laundering that into "the pain generator has been treated" or "medical care is no longer needed."</p>
+
+<p>Expert-provider trials overestimate routine practice. PRT, EAET, interdisciplinary rehab, manual therapy, acupuncture, and graded activity can all degrade when delivered by average providers under billing pressure. I may still underweight implementation failure because the trial literature underreports it.</p>
+
+<p>The patient-blaming risk is not theoretical. Behavioral and psychological pain protocols can be used to deny diagnostics, accommodations, analgesia, or disability support. That risk sharply lowers population grades for interventions that may still be reasonable for a self-directed person with good screening and a trustworthy clinician.</p>
+
+<p>Personal experimentation is more defensible than population recommendation when the intervention is reversible, cheap, self-monitorable, and has a clear stopping rule. It is less defensible when the safety floor is serious, the provider can exploit hope, or the intervention changes future options.</p>
+
+<h2>References</h2>
+
+<ol class="refs">
+<li id="ref1"><a href="https://pubmed.ncbi.nlm.nih.gov/28436583/">Geneen et al., Cochrane 2017</a>. Supports the broad but modest evidence for physical activity/exercise across chronic pain.</li>
+<li id="ref2"><a href="https://pubmed.ncbi.nlm.nih.gov/34580864/">Hayden et al., Cochrane 2021</a>. Supports exercise therapy for chronic non-specific low back pain, with small-to-moderate effects depending on comparator.</li>
+<li id="ref3"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7437545/">Williams et al., Cochrane 2020</a>. Supports small benefits of psychological therapies for chronic non-headache pain and the limits of CBT/ACT evidence.</li>
+<li id="ref4"><a href="https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2784694">Ashar et al., JAMA Psychiatry 2022</a>. Supports the large but replication-sensitive PRT signal in selected primary chronic back pain.</li>
+<li id="ref5"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11177167/">Yarns et al., JAMA Network Open 2024</a>. Supports EAET outperforming CBT in older veterans with chronic musculoskeletal pain.</li>
+<li id="ref6"><a href="https://pubmed.ncbi.nlm.nih.gov/30831273/">Watson et al., Journal of Pain 2019</a>. Supports PNE as a plausible adjunct with limited standalone analgesic evidence.</li>
+<li id="ref7"><a href="https://pubmed.ncbi.nlm.nih.gov/35998243/">SBU assessment, 2021/2022 record</a>. Supports multimodal and interdisciplinary intervention evidence for long-term pain.</li>
+<li id="ref8"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9297911/">Interdisciplinary multimodal pain treatment review, 2022</a>. Supports functional and symptom improvements while illustrating pre-post and heterogeneity limits.</li>
+<li id="ref9"><a href="https://pubmed.ncbi.nlm.nih.gov/39111059/">Bilterys et al., 2024</a>. Supports CBT-I for sleep disturbance in chronic musculoskeletal pain, with pain effects smaller than sleep effects.</li>
+<li id="ref10"><a href="https://bmcmusculoskeletdisord.biomedcentral.com/articles/10.1186/s12891-022-05318-5">Non-pharmacological sleep interventions review, 2022</a>. Supports CBT-I improving sleep quality in chronic pain and weaker pain-function evidence.</li>
+<li id="ref11"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12055162/">LDN fibromyalgia systematic review/meta-analysis, 2025</a>. Supports the fragile pooled LDN signal and adverse-effect profile.</li>
+<li id="ref12"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10039621/">LDN fibromyalgia review, 2023</a>. Supports the conclusion that LDN evidence remains preliminary.</li>
+<li id="ref13"><a href="https://pubmed.ncbi.nlm.nih.gov/38258677/">Bruun et al., Lancet Rheumatology 2024</a>. Supports the negative larger naltrexone 6 mg fibromyalgia RCT.</li>
+<li id="ref14"><a href="https://www.ncbi.nlm.nih.gov/books/NBK599849/">CADTH ketamine update, 2023</a>. Supports ketamine's limited chronic non-cancer pain evidence and safety burden.</li>
+<li id="ref15"><a href="https://www.cochrane.org/evidence/CD007393_capsaicin-applied-skin-chronic-neuropathic-pain-adults">Cochrane capsaicin review</a>. Supports high-concentration capsaicin for a minority of localized neuropathic pain responders.</li>
+<li id="ref16"><a href="https://www.cochrane.org/evidence/CD010958_topical-lidocaine-neuropathic-pain-adults">Cochrane topical lidocaine review</a>. Supports the low-certainty status of topical lidocaine for neuropathic pain.</li>
+<li id="ref17"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6446021/">Gibson et al., Cochrane TENS overview 2019</a>. Supports the conclusion that TENS evidence for chronic pain is inconclusive.</li>
+<li id="ref18"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9752114/">tDCS chronic pain review, 2022</a>. Supports small short-term tDCS signals and protocol limitations.</li>
+<li id="ref19"><a href="https://pubmed.ncbi.nlm.nih.gov/33818600/">Petersen et al., JAMA Neurology 2021</a>. Supports 10-kHz SCS for refractory painful diabetic neuropathy while noting open-label/device limitations.</li>
+<li id="ref20"><a href="https://www.cochrane.org/evidence/CD014789_stimulasi-sumsum-tulang-belakang-untuk-nyeri-punggung-bawah">Cochrane SCS low-back-pain review, 2023</a>. Supports not scaling SCS for nonspecific chronic low back pain.</li>
+<li id="ref21"><a href="https://pubmed.ncbi.nlm.nih.gov/29198932/">Vickers et al., Journal of Pain 2018</a>. Supports small but persistent acupuncture effects in several chronic pain conditions.</li>
+<li id="ref22"><a href="https://www.bmj.com/content/364/bmj.l689">Rubinstein et al., BMJ 2019</a>. Supports small effects of spinal manipulative therapy for chronic low back pain.</li>
+<li id="ref23"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6242300/">Hu et al., dry needling review 2018</a>. Supports short-term dry needling signals and weak durability evidence.</li>
+<li id="ref24"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6661560/">Herd et al., Cochrane botulinum toxin migraine review</a>. Supports botulinum toxin A for chronic migraine with modest mean headache-day reduction.</li>
+<li id="ref25"><a href="https://www.nice.org.uk/guidance/ta260/chapter/1-guidance">NICE TA260</a>. Supports coverage criteria for botulinum toxin in chronic migraine.</li>
+<li id="ref26"><a href="https://pubmed.ncbi.nlm.nih.gov/39476339/">Bliddal et al., NEJM 2024</a>. Supports semaglutide 2.4 mg improving weight and WOMAC pain in obesity-linked knee OA.</li>
+<li id="ref27"><a href="https://jamanetwork.com/journals/jama/fullarticle/2601490">Cherkin et al., JAMA follow-up</a>. Supports MBSR and CBT improving chronic low-back-pain function and bothersomeness versus usual care.</li>
+<li id="ref28"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5368208/">Hilton et al., mindfulness chronic pain review 2017</a>. Supports modest and low-certainty mindfulness benefits across chronic pain.</li>
+<li id="ref29"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7728933/">Mackey et al., opioid dose reduction rapid review 2020</a>. Supports caution about tapering evidence and harms reporting.</li>
+<li id="ref30"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3208163/">Hill et al., STarT Back trial 2011</a>. Supports stratified low-back-pain care in the original UK implementation.</li>
+<li id="ref31"><a href="https://pubmed.ncbi.nlm.nih.gov/29790073/">Cherkin et al., MATCH trial 2018</a>. Supports the weaker/null US implementation of risk-stratified low-back-pain care.</li>
+<li id="ref32"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8518659/">Danish stratified low-back-pain trial</a>. Supports reduced resource use without clear superior patient outcomes.</li>
+<li id="ref33"><a href="https://pubmed.ncbi.nlm.nih.gov/17204567/">Christensen et al., weight reduction knee OA meta-analysis</a>. Supports dose-related pain/function benefit from substantial weight loss in knee OA.</li>
+<li id="ref34"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5876887/">Darnall et al., patient-centered opioid tapering 2018</a>. Supports voluntary tapering feasibility without mean pain worsening in a selected cohort.</li>
+<li id="ref35"><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2784021">Powell et al., JAMA Network Open 2021</a>. Supports low-quality but plausible evidence for buprenorphine rotation in chronic pain on long-term opioids.</li>
+<li id="ref36"><a href="https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm">CDC opioid prescribing guideline, 2022</a>. Supports collaborative opioid risk-benefit review and warnings against abrupt discontinuation.</li>
+<li id="ref37"><a href="https://pubmed.ncbi.nlm.nih.gov/33740342/">Xu et al., peripheral nerve stimulation review 2021</a>. Supports condition-specific and still-limited PNS evidence.</li>
+<li id="ref38"><a href="https://www.bmj.com/content/374/bmj.n1034">Wang et al., BMJ cannabinoids chronic pain review 2021</a>. Supports small average benefits and increased adverse events.</li>
+<li id="ref39"><a href="https://www.bmj.com/content/374/bmj.n2040">BMJ Rapid Recommendation, 2021</a>. Supports only a weak recommendation for non-inhaled cannabis/cannabinoids after standard care is insufficient.</li>
+</ol>
+
+</main>
+</body>
+</html>
